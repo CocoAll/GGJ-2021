@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7426366824517708552}
   - component: {fileID: 7426366824517708559}
+  - component: {fileID: 1013263682}
+  - component: {fileID: 1013263683}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -43,6 +45,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4a99c8bd3429043a65fa2e6202b437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWork: 5
+  timeToWork: 200
   timerIsRunning: {fileID: 11400000, guid: 604f7f258153498469206464efa94f1e, type: 2}
   onRoundEnd: {fileID: 11400000, guid: bb553e040787ed94593cd3cb2dfa506b, type: 2}
+--- !u!114 &1013263682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426366824517708558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc36c9d4a7d024f8e1d0ab5bf6edeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 00f590c50f802884aae403eca8a4b3d0, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7426366824517708559}
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1013263683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426366824517708558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc36c9d4a7d024f8e1d0ab5bf6edeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 314015c03b02d984fa371edbe811ad31, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7426366824517708559}
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

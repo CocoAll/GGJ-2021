@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
   m_Name: Ex Enveloppe 1
   m_EditorClassIdentifier: 
-  titre: Bonjour
-  contenu: Je suis le contenu d'une lettre
+  titre: Je suis une lettre d'amour
+  contenu: "Bonjour\n\nJe suis le contenu de la lettre d'amour\nje veux voir a quelle
+    point \xE7a rend bien !\n\nCordialement,\n\nCorentin\n\nPS: Je pense que j'ai
+    encore de la place"
+  typeEnveloppe: 0

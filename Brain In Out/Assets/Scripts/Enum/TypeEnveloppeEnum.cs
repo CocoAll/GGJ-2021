@@ -1,4 +1,4 @@
-﻿public enum TypeEnveloppeEnum
+﻿public enum TypeEnum
 {
     AMOUR,
     TRAVAIL,

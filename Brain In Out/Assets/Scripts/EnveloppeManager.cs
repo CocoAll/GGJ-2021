@@ -21,15 +21,11 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private SignalSender onEnveloppeDraw;
 
-    private void Start()
-    {
-        FillEnveloppes();
-    }
-
     //Remplissage de la liste d'enveloppes a traiter
     public void FillEnveloppes()
     {
-        foreach(ListEnveloppes le in decksEnveloppes)
+        Debug.Log("FillEnveloppes of EnveloppeManager");
+        foreach (ListEnveloppes le in decksEnveloppes)
         {
             int nbCurrentBaseEnveloppes = 0;
             while (nbCurrentBaseEnveloppes < le.nbToDraw)
@@ -46,6 +42,7 @@ public class EnveloppeManager : MonoBehaviour
 
     public void DrawEnveloppe()
     {
+        Debug.Log("DrawEnveloppes of EnveloppeManager");
         if (enveloppes == null || isProcessingEnveloppe.Value || enveloppes.Count == 0) return;
 
         this.currentEnveloppe.value = enveloppes[enveloppes.Count-1];
@@ -56,11 +53,13 @@ public class EnveloppeManager : MonoBehaviour
 
     public int GetRemainingEnveloppesCount()
     {
+        Debug.Log("GetRemainingEnveloppesCount of EnveloppeManager");
         return this.enveloppes.Count;
     }
 
     public void ReinsertCurrentLetter()
     {
+        Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
         this.enveloppes.Add(currentEnveloppe.value);
     }
 }

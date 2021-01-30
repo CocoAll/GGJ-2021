@@ -43,4 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3f73adf6011364bb805dee38e1e10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jaugeAmour: {fileID: 11400000, guid: 990d5fce0ea0f0549a4c873b6ddfa173, type: 2}
+  jaugeTravail: {fileID: 11400000, guid: 236e0ca4701ab684ba14ee6ef2487322, type: 2}
+  jaugeSocial: {fileID: 11400000, guid: bf9eb9ee61d855745b735de78d2f615b, type: 2}
   startRound: {fileID: 11400000, guid: 00f590c50f802884aae403eca8a4b3d0, type: 2}

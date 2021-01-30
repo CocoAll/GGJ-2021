@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class LettreManager : MonoBehaviour
 {
+    [Header("UI Go")]
     [SerializeField]
     private GameObject lettreObject;
     [SerializeField]
     private GameObject enveloppeObject;
 
+    [Header("Divers Scriptable Object")]
     [SerializeField]
     private CurrentEnveloppe currentEnveloppe;
 
@@ -24,6 +26,7 @@ public class LettreManager : MonoBehaviour
 
     private EnveloppeManager enveloppeManager;
 
+    [Header("Enveloppe/Lettre visuals")]
     [SerializeField]
     private GameObject tamponAmour;
     [SerializeField]
@@ -32,9 +35,16 @@ public class LettreManager : MonoBehaviour
     private GameObject tamponSocial;
     [SerializeField]
     private Text enveloppeTexte;
-
     [SerializeField]
     private Text lettreTexte;
+
+    [Header("Jauges values")]
+    [SerializeField]
+    private IntValue jaugeAmour;
+    [SerializeField]
+    private IntValue jaugeTravail;
+    [SerializeField]
+    private IntValue jaugeSocial;
 
     private void Start()
     {
@@ -81,23 +91,28 @@ public class LettreManager : MonoBehaviour
     //
     public void SetUpEnveloppe()
     {
-        TypeEnveloppeEnum tee = currentEnveloppe.value.typeEnveloppe;
+        TypeEnum tee = currentEnveloppe.value.typeEnveloppe;
         switch (tee)
         {
-            case TypeEnveloppeEnum.AMOUR:
+            case TypeEnum.AMOUR:
                 tamponAmour.SetActive(true);
                 tamponTravail.SetActive(false);
                 tamponSocial.SetActive(false);
                 break;
-            case TypeEnveloppeEnum.TRAVAIL:
+            case TypeEnum.TRAVAIL:
                 tamponAmour.SetActive(false);
                 tamponTravail.SetActive(true);
                 tamponSocial.SetActive(false);
                 break;
-            case TypeEnveloppeEnum.SOCIAL:
+            case TypeEnum.SOCIAL:
                 tamponAmour.SetActive(false);
                 tamponTravail.SetActive(false);
                 tamponSocial.SetActive(true);
+                break;
+            case TypeEnum.NEUTRE:
+                tamponAmour.SetActive(false);
+                tamponTravail.SetActive(false);
+                tamponSocial.SetActive(false);
                 break;
         }
 

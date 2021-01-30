@@ -6,6 +6,10 @@ using UnityEngine;
 public class EnveloppeObject : ScriptableObject
 {
     public string titre;
+    [TextArea(3, 5)]
     public string contenu;
-    public TypeEnveloppeEnum typeEnveloppe;
+    public TypeEnum typeEnveloppe;
+    public int enveloppeEffect;
+    public TypeEnum typeLettre;
+    public int lettreEffect;
 }
