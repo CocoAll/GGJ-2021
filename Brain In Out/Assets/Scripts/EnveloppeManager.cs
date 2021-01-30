@@ -16,7 +16,7 @@ public class EnveloppeManager : MonoBehaviour
     private CurrentEnveloppe currentEnveloppe;
 
     [SerializeField]
-    private SignalSender onCardDraw;
+    private SignalSender onEnveloppeDraw;
 
     private void Start()
     {
@@ -40,8 +40,10 @@ public class EnveloppeManager : MonoBehaviour
 
     public void DrawEnveloppe()
     {
+        if (enveloppes == null || enveloppes.Count == 0) return;
+
         this.currentEnveloppe.value = enveloppes[enveloppes.Count-1];
         this.enveloppes.RemoveAt(enveloppes.Count - 1);
-        onCardDraw.Raise();
+        onEnveloppeDraw.Raise();
     }
 }

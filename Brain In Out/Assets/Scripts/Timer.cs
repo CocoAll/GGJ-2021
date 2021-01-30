@@ -8,7 +8,8 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float timeToWork = 6000;
     private float timeRemaining = 0.0f;
-    private bool timerIsRunning = true;
+    [SerializeField]
+    private BooleanValue timerIsRunning;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (timerIsRunning)
+        if (timerIsRunning.value)
         {
             if(timeRemaining > 0)
             {
@@ -26,7 +27,7 @@ public class Timer : MonoBehaviour
             else
             {
                 timeRemaining = 0;
-                timerIsRunning = false;
+                timerIsRunning.value = false;
             }
         }
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Unity.Utils.PatternObserver
 {
-    [CreateAssetMenu(fileName = "Signal Sender", menuName = "Scriptable Object/SignalSender", order = 0)]
+    [CreateAssetMenu(fileName = "Signal Sender", menuName = "ScriptableObject/SignalSender", order = 100)]
     public class SignalSender : ScriptableObject
     {
         public List<ISignalListener> listeners = new List<ISignalListener>();
