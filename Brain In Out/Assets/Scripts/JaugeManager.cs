@@ -100,7 +100,7 @@ public class JaugeManager : MonoBehaviour
         UpdateJauges();
     }
 
-    private void UpdateJauges()
+    public void UpdateJauges()
     {
         var newScale = this.goJaugeAmour.transform.localScale;
         newScale.y = goAmourScaleY * (jaugeAmour.Value / 100.0f);
