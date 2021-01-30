@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log("Start of Game Manager");
-        StartRound();
+        StartGame();
     }
 
     // Update is called once per frame
@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("StartRound of Game Manager");
         isGameRunning.Value = true;
         isProcessingEnveloppe.Value = false;
+        startRound.Raise();
+    }
+
+    private void StartGame()
+    {
         startRound.Raise();
     }
 
