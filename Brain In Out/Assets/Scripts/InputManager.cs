@@ -6,6 +6,8 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField]
     private BooleanValue isGameRunning;
+    [SerializeField]
+    private BooleanValue isProcessingLetter;
 
     // Update is called once per frame
     void Update()
@@ -18,10 +20,18 @@ public class InputManager : MonoBehaviour
 
             // On raycast à la position de la souris pour un collicer 2d
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider != null)
+            if (hit.collider != null )
             {
-                Debug.Log(hit.collider.gameObject.name);
+                ProcessClick(hit.collider.gameObject);
             }
         }      
+    }
+
+    private void ProcessClick(GameObject go)
+    {
+        if (go.CompareTag("EnveloppeManager") && !isProcessingLetter.Value)
+        {
+            go.GetComponent<EnveloppeManager>().DrawEnveloppe();
+        }
     }
 }

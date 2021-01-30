@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7192928690377059313}
   m_Layer: 0
   m_Name: EnveloppeManager
-  m_TagString: Untagged
+  m_TagString: EnveloppeManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445e0de56b36a1e46b68616efdde00b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseEnveloppes: {fileID: 0}
+  baseEnveloppes: {fileID: 11400000, guid: 339b876cb9a247745b749a5ed4a5ef69, type: 2}
   enveloppes: []
-  currentEnveloppe: {fileID: 0}
-  onCardDraw: {fileID: 0}
+  currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}
+  isProcessingEnveloppe: {fileID: 11400000, guid: 93e42c2b469971347b521576189a5abe,
+    type: 2}
+  onEnveloppeDraw: {fileID: 11400000, guid: 314015c03b02d984fa371edbe811ad31, type: 2}
 --- !u!61 &7192928690377059313
 BoxCollider2D:
   m_ObjectHideFlags: 0

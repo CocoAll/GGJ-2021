@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Utils.PatternObserver;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
@@ -10,6 +11,9 @@ public class Timer : MonoBehaviour
     private float timeRemaining = 0.0f;
     [SerializeField]
     private BooleanValue timerIsRunning;
+
+    [SerializeField]
+    private SignalSender onRoundEnd;
 
     private void Start()
     {
@@ -28,6 +32,7 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining = 0;
                 timerIsRunning.Value = false;
+                onRoundEnd.Raise();
             }
         }
     }

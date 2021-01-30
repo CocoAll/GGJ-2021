@@ -16,6 +16,9 @@ public class EnveloppeManager : MonoBehaviour
     private CurrentEnveloppe currentEnveloppe;
 
     [SerializeField]
+    private BooleanValue isProcessingEnveloppe;
+
+    [SerializeField]
     private SignalSender onEnveloppeDraw;
 
     private void Start()
@@ -30,9 +33,9 @@ public class EnveloppeManager : MonoBehaviour
         while (nbCurrentBaseEnveloppes < this.baseEnveloppes.nbToDraw)
         {
             EnveloppeObject eo = this.baseEnveloppes.enveloppes[Random.Range(0, this.baseEnveloppes.enveloppes.Count)];
-            if (!this.enveloppes.Contains(eo))
+            if (!enveloppes.Contains(eo))
             {
-                this.enveloppes.Add(eo);
+                enveloppes.Add(eo);
                 nbCurrentBaseEnveloppes++;
             }
         }
@@ -40,10 +43,21 @@ public class EnveloppeManager : MonoBehaviour
 
     public void DrawEnveloppe()
     {
-        if (enveloppes == null || enveloppes.Count == 0) return;
+        if (enveloppes == null || isProcessingEnveloppe.Value || enveloppes.Count == 0) return;
 
         this.currentEnveloppe.value = enveloppes[enveloppes.Count-1];
         this.enveloppes.RemoveAt(enveloppes.Count - 1);
-        onEnveloppeDraw.Raise();
+        this.isProcessingEnveloppe.Value = true;
+        this.onEnveloppeDraw.Raise();
+    }
+
+    public int GetRemainingEnveloppesCount()
+    {
+        return this.enveloppes.Count;
+    }
+
+    public void ReinsertCurrentLetter()
+    {
+        this.enveloppes.Add(currentEnveloppe.value);
     }
 }
