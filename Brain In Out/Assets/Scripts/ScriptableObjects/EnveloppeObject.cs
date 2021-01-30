@@ -7,5 +7,5 @@ public class EnveloppeObject : ScriptableObject
 {
     public string titre;
     public string contenu;
-
+    public TypeEnveloppeEnum typeEnveloppe;
 }

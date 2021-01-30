@@ -7,7 +7,7 @@ public class EnveloppeManager : MonoBehaviour
 
     //List des enveloppes de bases qui seront récurrentes
     [SerializeField]
-    private ListEnveloppes baseEnveloppes;
+    private List<ListEnveloppes> decksEnveloppes;
 
     //List des enveloppes à traiter pendant un round
     [SerializeField]
@@ -29,14 +29,17 @@ public class EnveloppeManager : MonoBehaviour
     //Remplissage de la liste d'enveloppes a traiter
     public void FillEnveloppes()
     {
-        int nbCurrentBaseEnveloppes = 0;
-        while (nbCurrentBaseEnveloppes < this.baseEnveloppes.nbToDraw)
+        foreach(ListEnveloppes le in decksEnveloppes)
         {
-            EnveloppeObject eo = this.baseEnveloppes.enveloppes[Random.Range(0, this.baseEnveloppes.enveloppes.Count)];
-            if (!enveloppes.Contains(eo))
+            int nbCurrentBaseEnveloppes = 0;
+            while (nbCurrentBaseEnveloppes < le.nbToDraw)
             {
-                enveloppes.Add(eo);
-                nbCurrentBaseEnveloppes++;
+                EnveloppeObject eo = le.enveloppes[Random.Range(0, le.enveloppes.Count)];
+                if (!enveloppes.Contains(eo))
+                {
+                    enveloppes.Add(eo);
+                    nbCurrentBaseEnveloppes++;
+                }
             }
         }
     }

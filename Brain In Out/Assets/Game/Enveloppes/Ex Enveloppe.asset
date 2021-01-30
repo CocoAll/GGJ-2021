@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titre: Bonjour
   contenu: Je suis le contenu d'une lettre
+  typeEnveloppe: 2

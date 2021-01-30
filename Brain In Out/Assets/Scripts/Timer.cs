@@ -36,4 +36,14 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+    public void ResetTimer()
+    {
+        timeRemaining = timeToWork;
+    }
+
+    public void StartTimer()
+    {
+        timerIsRunning.Value = true;
+    }
 }

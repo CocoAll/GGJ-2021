@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Utils.PatternObserver;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LettreManager : MonoBehaviour
 {
@@ -22,6 +23,18 @@ public class LettreManager : MonoBehaviour
     private SignalSender onRoundEnd;
 
     private EnveloppeManager enveloppeManager;
+
+    [SerializeField]
+    private GameObject tamponAmour;
+    [SerializeField]
+    private GameObject tamponTravail;
+    [SerializeField]
+    private GameObject tamponSocial;
+    [SerializeField]
+    private Text enveloppeTexte;
+
+    [SerializeField]
+    private Text lettreTexte;
 
     private void Start()
     {
@@ -68,11 +81,34 @@ public class LettreManager : MonoBehaviour
     //
     public void SetUpEnveloppe()
     {
+        TypeEnveloppeEnum tee = currentEnveloppe.value.typeEnveloppe;
+        switch (tee)
+        {
+            case TypeEnveloppeEnum.AMOUR:
+                tamponAmour.SetActive(true);
+                tamponTravail.SetActive(false);
+                tamponSocial.SetActive(false);
+                break;
+            case TypeEnveloppeEnum.TRAVAIL:
+                tamponAmour.SetActive(false);
+                tamponTravail.SetActive(true);
+                tamponSocial.SetActive(false);
+                break;
+            case TypeEnveloppeEnum.SOCIAL:
+                tamponAmour.SetActive(false);
+                tamponTravail.SetActive(false);
+                tamponSocial.SetActive(true);
+                break;
+        }
+
+        enveloppeTexte.text = currentEnveloppe.value.titre;
+
         enveloppeObject.SetActive(true);
     }
 
     public void SetUpLettre()
     {
+        lettreTexte.text = currentEnveloppe.value.contenu;
         lettreObject.SetActive(true);
     }
 
