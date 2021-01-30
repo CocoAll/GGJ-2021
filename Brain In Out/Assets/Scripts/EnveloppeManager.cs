@@ -35,6 +35,17 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private TypeEnumValue overwhelmedType;
 
+    [SerializeField]
+    private GameObject tas1Enveloppe;
+    [SerializeField]
+    private GameObject tas2Enveloppe;
+    [SerializeField]
+    private GameObject tas3Enveloppe;
+    [SerializeField]
+    private GameObject tas4Enveloppe;
+    [SerializeField]
+    private GameObject tas5Enveloppe;
+
     private void Start()
     {
         listeRefoule = new List<EnveloppeObject>();
@@ -65,12 +76,13 @@ public class EnveloppeManager : MonoBehaviour
         {
             foreach(EnveloppeObject eo in listeRefoule)
             {
-                if(eo.typeReffoule == overwhelmedType.value)
+                if(eo.typeRefoule == overwhelmedType.value)
                 {
                     enveloppes.Add(eo);
                 }
             }
         }
+        SetUpTasEnveloppe();
     }
 
     private void CheckOverwhelmingValid()
@@ -108,6 +120,7 @@ public class EnveloppeManager : MonoBehaviour
         this.currentEnveloppe.value = enveloppes[enveloppes.Count-1];
         this.enveloppes.RemoveAt(enveloppes.Count - 1);
         this.isProcessingEnveloppe.Value = true;
+        SetUpTasEnveloppe();
         this.onEnveloppeDraw.Raise();
     }
 
@@ -127,10 +140,61 @@ public class EnveloppeManager : MonoBehaviour
     public void RefouleCurrentLetter()
     {
         Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
-        if (currentEnveloppe.value.reffouleEffect >= 0) return;
+        if (currentEnveloppe.value.refouleEffect >= 0) return;
 
         EnveloppeObject eo = Instantiate(currentEnveloppe.value);
         eo.refoule = true;
         this.listeRefoule.Add(eo);
+    }
+
+    public void SetUpTasEnveloppe()
+    {
+        if(enveloppes.Count == 0)
+        {
+            tas1Enveloppe.SetActive(false);
+            tas2Enveloppe.SetActive(false);
+            tas3Enveloppe.SetActive(false);
+            tas4Enveloppe.SetActive(false);
+            tas5Enveloppe.SetActive(false);
+        } else if (enveloppes.Count == 1)
+        {
+            tas1Enveloppe.SetActive(true);
+            tas2Enveloppe.SetActive(false);
+            tas3Enveloppe.SetActive(false);
+            tas4Enveloppe.SetActive(false);
+            tas5Enveloppe.SetActive(false);
+        }
+        else if (enveloppes.Count < 7)
+        {
+            tas1Enveloppe.SetActive(false);
+            tas2Enveloppe.SetActive(true);
+            tas3Enveloppe.SetActive(false);
+            tas4Enveloppe.SetActive(false);
+            tas5Enveloppe.SetActive(false);
+        }
+        else if (enveloppes.Count < 15)
+        {
+            tas1Enveloppe.SetActive(false);
+            tas2Enveloppe.SetActive(false);
+            tas3Enveloppe.SetActive(true);
+            tas4Enveloppe.SetActive(false);
+            tas5Enveloppe.SetActive(false);
+        }
+        else if (enveloppes.Count < 25)
+        {
+            tas1Enveloppe.SetActive(false);
+            tas2Enveloppe.SetActive(false);
+            tas3Enveloppe.SetActive(false);
+            tas4Enveloppe.SetActive(true);
+            tas5Enveloppe.SetActive(false);
+        }
+        else
+        {
+            tas1Enveloppe.SetActive(false);
+            tas2Enveloppe.SetActive(false);
+            tas3Enveloppe.SetActive(false);
+            tas4Enveloppe.SetActive(false);
+            tas5Enveloppe.SetActive(true);
+        }
     }
 }

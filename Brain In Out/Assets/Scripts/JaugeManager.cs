@@ -13,13 +13,30 @@ public class JaugeManager : MonoBehaviour
     [SerializeField]
     private IntValue jaugeSocial;
 
-    private TypeEnum overwhelmingEmotion = TypeEnum.NEUTRE;
+    [SerializeField]
+    private SpriteRenderer goJaugeAmour;
+    [SerializeField]
+    private SpriteRenderer goJaugeTravail;
+    [SerializeField]
+    private SpriteRenderer goJaugeSocial;
+
+    private float goAmourScaleY;
+    private float goTravailScaleY;
+    private float goSocialScaleY;
+
     [SerializeField]
     private TypeEnumValue onOverwhelmed;
 
     [SerializeField]
     private CurrentEnveloppe currentEnveloppe;
 
+    private void Start()
+    {
+        goAmourScaleY = goJaugeAmour.transform.localScale.y;
+        goTravailScaleY = goJaugeTravail.transform.localScale.y;
+        goSocialScaleY = goJaugeSocial.transform.localScale.y;
+        UpdateJauges();
+    }
 
     //
     //Application de l'effet en fonction de l'evenement
@@ -29,9 +46,16 @@ public class JaugeManager : MonoBehaviour
         ApplyEffect(currentEnveloppe.value.typeEnveloppe, currentEnveloppe.value.enveloppeEffect);
     }
 
-    public void AppplyLetterEffetct()
+    public void AppplyLetterEffect()
     {
-        ApplyEffect(currentEnveloppe.value.typeLettre, currentEnveloppe.value.lettreEffect);
+        if (!currentEnveloppe.value.refoule)
+        {
+            ApplyEffect(currentEnveloppe.value.typeLettre, currentEnveloppe.value.lettreEffect);
+        }
+        else
+        {
+            ApplyEffect(currentEnveloppe.value.typeRefoule, currentEnveloppe.value.refouleEffect);
+        }
     }
 
     /*public void AppplyRefouleEffetct()
@@ -48,27 +72,46 @@ public class JaugeManager : MonoBehaviour
         {
             case TypeEnum.AMOUR:
                 jaugeAmour.Value += value;
-                if(jaugeAmour.Value < 20 && overwhelmingEmotion == TypeEnum.NEUTRE)
+                jaugeAmour.Value = Mathf.Clamp(jaugeAmour.Value, 0, 100);
+                
+                if (jaugeAmour.Value < 20 && onOverwhelmed.value == TypeEnum.NEUTRE)
                 {
-                    overwhelmingEmotion = type;
                     onOverwhelmed.value = TypeEnum.AMOUR;
                 }
                 break;
             case TypeEnum.TRAVAIL:
                 jaugeTravail.Value += value;
-                if (jaugeAmour.Value < 20 && overwhelmingEmotion == TypeEnum.NEUTRE)
+                jaugeTravail.Value = Mathf.Clamp(jaugeTravail.Value, 0, 100);
+
+                if (jaugeTravail.Value < 20 && onOverwhelmed.value == TypeEnum.NEUTRE)
                 {
-                    overwhelmingEmotion = type;
                     onOverwhelmed.value = TypeEnum.TRAVAIL;                }
                 break;
             case TypeEnum.SOCIAL:
                 jaugeSocial.Value += value;
-                if (jaugeAmour.Value < 20 && overwhelmingEmotion == TypeEnum.NEUTRE)
+                jaugeSocial.Value = Mathf.Clamp(jaugeSocial.Value, 0, 100);
+
+                if (jaugeSocial.Value < 20 && onOverwhelmed.value == TypeEnum.NEUTRE)
                 {
-                    overwhelmingEmotion = type;
                     onOverwhelmed.value = TypeEnum.SOCIAL;
                 }
                 break;
         }
+        UpdateJauges();
+    }
+
+    private void UpdateJauges()
+    {
+        var newScale = this.goJaugeAmour.transform.localScale;
+        newScale.y = goAmourScaleY * (jaugeAmour.Value / 100.0f);
+        this.goJaugeAmour.transform.localScale = newScale;
+
+        newScale = this.goJaugeTravail.transform.localScale;
+        newScale.y = goTravailScaleY * (jaugeTravail.Value / 100.0f);
+        this.goJaugeTravail.transform.localScale = newScale;
+
+        newScale = this.goJaugeSocial.transform.localScale;
+        newScale.y = goSocialScaleY * (jaugeSocial.Value / 100.0f);
+        this.goJaugeSocial.transform.localScale = newScale;
     }
 }

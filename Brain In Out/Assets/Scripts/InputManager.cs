@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
@@ -8,6 +6,13 @@ public class InputManager : MonoBehaviour
     private BooleanValue isGameRunning;
     [SerializeField]
     private BooleanValue isProcessingLetter;
+
+    private EnveloppeManager em;
+
+    private void Start()
+    {
+        em = FindObjectOfType<EnveloppeManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,9 +34,9 @@ public class InputManager : MonoBehaviour
 
     private void ProcessClick(GameObject go)
     {
-        if (go.CompareTag("EnveloppeManager") && !isProcessingLetter.Value)
+        if (go.CompareTag("Enveloppe") && !isProcessingLetter.Value)
         {
-            go.GetComponent<EnveloppeManager>().DrawEnveloppe();
+           em.DrawEnveloppe();
         }
     }
 }
