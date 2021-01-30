@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField]
+    private BooleanValue isGameRunning;
+
     // Update is called once per frame
     void Update()
     {
