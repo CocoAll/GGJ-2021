@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: Ex Enveloppe
+  m_Script: {fileID: 11500000, guid: 86616d288e828ef46891580a002ecb63, type: 3}
+  m_Name: ex List
   m_EditorClassIdentifier: 
-  titre: Bonjour
-  contenu: Je suis le contenu d'une lettre
+  enveloppes:
+  - {fileID: 11400000, guid: 2a2b3eed86d5d6a4291e2c2a1d0a73b5, type: 2}
