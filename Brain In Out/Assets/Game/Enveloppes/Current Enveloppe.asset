@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366512dd5c2c6948b1bd8f822701627, type: 3}
   m_Name: Current Enveloppe
   m_EditorClassIdentifier: 
-  value: {fileID: 0}
+  value: {fileID: 11400000, guid: 2a2b3eed86d5d6a4291e2c2a1d0a73b5, type: 2}

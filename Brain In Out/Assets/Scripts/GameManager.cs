@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Utils.PatternObserver;
 using UnityEngine;
@@ -12,6 +13,11 @@ public class GameManager : MonoBehaviour
     private IntValue jaugeTravail;
     [SerializeField]
     private IntValue jaugeSocial;
+
+    [SerializeField]
+    private BooleanValue isGameRunning;
+    [SerializeField]
+    private BooleanValue isProcessingEnveloppe;
 
     [SerializeField]
     private SignalSender startRound;
@@ -38,6 +44,8 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         Debug.Log("StartRound of Game Manager");
+        isGameRunning.Value = true;
+        isProcessingEnveloppe.Value = false;
         startRound.Raise();
     }
 
@@ -50,6 +58,5 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
 
 }

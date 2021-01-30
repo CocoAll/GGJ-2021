@@ -11,6 +11,10 @@ public class LettreManager : MonoBehaviour
     private GameObject lettreObject;
     [SerializeField]
     private GameObject enveloppeObject;
+    [SerializeField]
+    private Button remettreButton;
+    [SerializeField]
+    private Button refouleButton;
 
     [Header("Divers Scriptable Object")]
     [SerializeField]
@@ -71,6 +75,7 @@ public class LettreManager : MonoBehaviour
 
     public void RefoulerLettre()
     {
+        enveloppeManager.RefouleCurrentLetter();
         isProcessingEnveloppe.Value = false;
         CheckRoundState();
         enveloppeObject.SetActive(false);
@@ -114,6 +119,27 @@ public class LettreManager : MonoBehaviour
                 tamponTravail.SetActive(false);
                 tamponSocial.SetActive(false);
                 break;
+        }
+
+        //Désactions des interactions des boutons si nécéssaires
+        if (currentEnveloppe.value.refoule)
+        {
+            remettreButton.interactable = false;
+            refouleButton.interactable = false;
+        }else if (currentEnveloppe.value.remiseDansLeTas)
+        {
+            remettreButton.interactable = false;
+        }
+        
+
+        //Reset des bouttons si nécéssaires
+        if (remettreButton.interactable == false && !currentEnveloppe.value.remiseDansLeTas)
+        {
+            remettreButton.interactable = true;
+        }
+        if (refouleButton.interactable == false && !currentEnveloppe.value.refoule)
+        {
+            refouleButton.interactable = true;
         }
 
         enveloppeTexte.text = currentEnveloppe.value.titre;

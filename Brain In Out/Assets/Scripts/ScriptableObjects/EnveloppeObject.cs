@@ -12,4 +12,8 @@ public class EnveloppeObject : ScriptableObject
     public int enveloppeEffect;
     public TypeEnum typeLettre;
     public int lettreEffect;
+    public TypeEnum typeReffoule;
+    public int reffouleEffect;
+    public bool remiseDansLeTas = false;
+    public bool refoule = false;
 }

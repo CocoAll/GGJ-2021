@@ -17,3 +17,6 @@ MonoBehaviour:
     point \xE7a rend bien !\n\nCordialement,\n\nCorentin\n\nPS: Je pense que j'ai
     encore de la place"
   typeEnveloppe: 2
+  enveloppeEffect: 10
+  typeLettre: 0
+  lettreEffect: 10

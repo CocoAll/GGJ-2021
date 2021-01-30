@@ -9,11 +9,22 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private List<ListEnveloppes> decksEnveloppes;
 
+    [SerializeField]
+    private List<EnveloppeObject> listeRefoule;
+
     //List des enveloppes à traiter pendant un round
     [SerializeField]
-    private List<EnveloppeObject> enveloppes = new List<EnveloppeObject>();
+    private List<EnveloppeObject> enveloppes;
     [SerializeField]
     private CurrentEnveloppe currentEnveloppe;
+
+    //Liste des jauges
+    [SerializeField]
+    private IntValue jaugeAmour;
+    [SerializeField]
+    private IntValue jaugeTravail;
+    [SerializeField]
+    private IntValue jaugeSocial;
 
     [SerializeField]
     private BooleanValue isProcessingEnveloppe;
@@ -21,9 +32,18 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private SignalSender onEnveloppeDraw;
 
+    [SerializeField]
+    private TypeEnumValue overwhelmedType;
+
+    private void Start()
+    {
+        listeRefoule = new List<EnveloppeObject>();
+    }
+
     //Remplissage de la liste d'enveloppes a traiter
     public void FillEnveloppes()
     {
+        enveloppes = new List<EnveloppeObject>();
         Debug.Log("FillEnveloppes of EnveloppeManager");
         foreach (ListEnveloppes le in decksEnveloppes)
         {
@@ -33,10 +53,50 @@ public class EnveloppeManager : MonoBehaviour
                 EnveloppeObject eo = le.enveloppes[Random.Range(0, le.enveloppes.Count)];
                 if (!enveloppes.Contains(eo))
                 {
+                    eo.remiseDansLeTas = false;
                     enveloppes.Add(eo);
                     nbCurrentBaseEnveloppes++;
                 }
             }
+        }
+
+        CheckOverwhelmingValid();
+        if(overwhelmedType.value != TypeEnum.NEUTRE)
+        {
+            foreach(EnveloppeObject eo in listeRefoule)
+            {
+                if(eo.typeReffoule == overwhelmedType.value)
+                {
+                    enveloppes.Add(eo);
+                }
+            }
+        }
+    }
+
+    private void CheckOverwhelmingValid()
+    {
+        if (overwhelmedType.value == TypeEnum.NEUTRE) return;
+
+        switch (overwhelmedType.value)
+        {
+            case TypeEnum.AMOUR:
+                if(jaugeAmour.Value > 20)
+                {
+                    overwhelmedType.value = TypeEnum.NEUTRE;
+                }
+                break;
+            case TypeEnum.SOCIAL:
+                if (jaugeSocial.Value > 20)
+                {
+                    overwhelmedType.value = TypeEnum.NEUTRE;
+                }
+                break;
+            case TypeEnum.TRAVAIL:
+                if (jaugeTravail.Value > 20)
+                {
+                    overwhelmedType.value = TypeEnum.NEUTRE;
+                }
+                break;
         }
     }
 
@@ -60,6 +120,17 @@ public class EnveloppeManager : MonoBehaviour
     public void ReinsertCurrentLetter()
     {
         Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
-        this.enveloppes.Add(currentEnveloppe.value);
+        currentEnveloppe.value.remiseDansLeTas = true;
+        this.enveloppes.Insert(0, currentEnveloppe.value);
+    }
+    
+    public void RefouleCurrentLetter()
+    {
+        Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
+        if (currentEnveloppe.value.reffouleEffect >= 0) return;
+
+        EnveloppeObject eo = Instantiate(currentEnveloppe.value);
+        eo.refoule = true;
+        this.listeRefoule.Add(eo);
     }
 }

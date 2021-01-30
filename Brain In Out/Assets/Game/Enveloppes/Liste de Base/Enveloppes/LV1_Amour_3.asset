@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: Ex Enveloppe 1
+  m_Name: LV1_Amour_3
   m_EditorClassIdentifier: 
-  titre: Je suis une lettre d'amour
-  contenu: "Bonjour\n\nJe suis le contenu de la lettre d'amour\nje veux voir a quelle
-    point \xE7a rend bien !\n\nCordialement,\n\nCorentin\n\nPS: Je pense que j'ai
-    encore de la place"
+  titre: New crush
+  contenu: I can't decide between {girlName} and {boyName}, I find them both attractive.
+    Who should I choose?
   typeEnveloppe: 0
+  enveloppeEffect: 0
+  typeLettre: 0
+  lettreEffect: 5
+  "typeReffoul\xE9": 0
+  "Reffoul\xE9Effect": -10

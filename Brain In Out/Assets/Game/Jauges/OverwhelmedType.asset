@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b0cf985fd30ab4583ebef29abcf867, type: 3}
-  m_Name: IsGameRunning
+  m_Script: {fileID: 11500000, guid: f06809795bbf1ab4ea991478fc08b43f, type: 3}
+  m_Name: OverwhelmedType
   m_EditorClassIdentifier: 
-  defaultValue: 0
+  value: 3
