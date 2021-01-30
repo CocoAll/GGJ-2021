@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Unity.Utils.PatternObserver;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -15,6 +17,9 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private SignalSender onRoundEnd;
 
+    [SerializeField]
+    private Text timerText;
+
     private void Start()
     {
         Debug.Log("Start of Timer");
@@ -24,6 +29,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         Debug.Log("Update of Timer");
+        DisplayTimer();
         if (timerIsRunning.Value)
         {
             if(timeRemaining > 0)
@@ -49,5 +55,11 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("StartTimer of Timer");
         timerIsRunning.Value = true;
+    }
+
+    private void DisplayTimer()
+    {
+        string timeRemainingFormatted = TimeSpan.FromSeconds(timeRemaining).ToString(@"mm\:ss");
+        timerText.text = "WAKE UP IN\n" + timeRemainingFormatted;
     }
 }
