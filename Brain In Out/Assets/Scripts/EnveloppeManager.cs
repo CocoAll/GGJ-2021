@@ -82,6 +82,16 @@ public class EnveloppeManager : MonoBehaviour
                 }
             }
         }
+
+        //Shuffle de la liste
+        for (int i = enveloppes.Count - 1; i > 0; i--)
+        {
+            int r = Random.Range(0, i + 1);
+            EnveloppeObject tmp = enveloppes[i];
+            enveloppes[i] = enveloppes[r];
+            enveloppes[r] = tmp;
+        }
+
         SetUpTasEnveloppe();
     }
 
