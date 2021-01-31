@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_1
+  m_Name: LV2_Travail_6
   m_EditorClassIdentifier: 
-  titre: I miss having free time
-  contenu: Sometimes I would like to take a big break
-  typeEnveloppe: 1
-  enveloppeEffect: -5
+  titre: '{crushName} picked me up at work'
+  contenu: '{crushName} surprised me by coming to pick me up, it made me happy but
+    I didn''t have time to finish what I was doing.'
+  typeEnveloppe: 0
+  enveloppeEffect: 10
   typeLettre: 1
-  lettreEffect: -5
+  lettreEffect: -10
   typeRefoule: 1
-  refouleEffect: -10
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

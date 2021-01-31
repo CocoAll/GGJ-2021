@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_4
+  m_Name: LV2_Travail_1
   m_EditorClassIdentifier: 
-  titre: I worked overtime
-  contenu: The boss was happy that I stayed later to help out, my friends didn't
-    take it as well when I arrived an hour and a half later than expected.
+  titre: I miss having free time
+  contenu: Sometimes I would like to take a big break
   typeEnveloppe: 1
-  enveloppeEffect: 5
-  typeLettre: 2
-  lettreEffect: -5
-  typeRefoule: 2
+  enveloppeEffect: -5
+  typeLettre: 1
+  lettreEffect: -7
+  typeRefoule: 1
   refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

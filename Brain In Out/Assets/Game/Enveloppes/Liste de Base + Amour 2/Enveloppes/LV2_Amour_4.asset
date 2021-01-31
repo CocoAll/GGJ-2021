@@ -15,7 +15,7 @@ MonoBehaviour:
   titre: '{crushName} is adorable'
   contenu: '{crushName} gave me a gift : {gift}. I love it !'
   typeEnveloppe: 0
-  enveloppeEffect: 5
+  enveloppeEffect: 2
   typeLettre: 0
   lettreEffect: 5
   typeRefoule: 0

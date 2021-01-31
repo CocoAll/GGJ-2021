@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Social_3
+  m_Name: LV2_Travail_3
   m_EditorClassIdentifier: 
-  titre: Great afternoon with my group of friends
-  contenu: We all went to the {activity} together. I love them.
-  typeEnveloppe: 2
-  enveloppeEffect: 5
-  typeLettre: 2
-  lettreEffect: 5
-  "typeReffoul\xE9": 2
-  "Reffoul\xE9Effect": 0
+  titre: What a boring day at work.
+  contenu: I had 3 clients. So no one is interested in {storeMerch} today?
+  typeEnveloppe: 1
+  enveloppeEffect: -5
+  typeLettre: 1
+  lettreEffect: -7
+  typeRefoule: 1
+  refouleEffect: -5
+  remiseDansLeTas: 0
+  refoule: 0

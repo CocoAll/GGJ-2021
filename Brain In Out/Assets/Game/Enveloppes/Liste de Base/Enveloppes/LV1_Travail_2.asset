@@ -17,6 +17,8 @@ MonoBehaviour:
   typeEnveloppe: 1
   enveloppeEffect: -5
   typeLettre: 1
-  lettreEffect: -5
-  "typeReffoul\xE9": 3
-  "Reffoul\xE9Effect": 0
+  lettreEffect: -7
+  typeRefoule: 1
+  refouleEffect: -5
+  remiseDansLeTas: 0
+  refoule: 0

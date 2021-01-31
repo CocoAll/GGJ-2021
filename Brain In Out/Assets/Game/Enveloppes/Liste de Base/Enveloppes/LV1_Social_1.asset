@@ -16,8 +16,10 @@ MonoBehaviour:
   contenu: '{friendName} sent me a funny {videoTheme} video and we talked for quite
     a while.'
   typeEnveloppe: 2
-  enveloppeEffect: 5
+  enveloppeEffect: 2
   typeLettre: 2
   lettreEffect: 5
-  "typeReffoul\xE9": 3
-  "Reffoul\xE9Effect": 0
+  typeRefoule: 2
+  refouleEffect: 0
+  remiseDansLeTas: 0
+  refoule: 0

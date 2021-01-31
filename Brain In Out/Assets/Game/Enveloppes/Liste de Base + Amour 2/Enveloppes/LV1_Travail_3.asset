@@ -16,10 +16,10 @@ MonoBehaviour:
   contenu: 'I''m starting to be short on money and two stores have offered me a job:
     a {storeMerch1} store and a {storeMerch2} store. Which one to choose?'
   typeEnveloppe: 1
-  enveloppeEffect: 0
+  enveloppeEffect: -7
   typeLettre: 1
-  lettreEffect: 5
-  typeRefoule: 0
-  refouleEffect: -10
+  lettreEffect: 10
+  typeRefoule: 1
+  refouleEffect: 0
   remiseDansLeTas: 0
   refoule: 0

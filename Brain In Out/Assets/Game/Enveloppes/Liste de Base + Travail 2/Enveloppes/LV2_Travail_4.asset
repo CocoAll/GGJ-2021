@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_3
+  m_Name: LV2_Travail_4
   m_EditorClassIdentifier: 
-  titre: What a boring day at work.
-  contenu: I had 3 clients. So no one is interested in {storeMerch} today?
+  titre: I worked overtime
+  contenu: The boss was happy that I stayed later to help out, my friends didn't
+    take it as well when I arrived an hour and a half later than expected.
   typeEnveloppe: 1
-  enveloppeEffect: -5
-  typeLettre: 1
-  lettreEffect: -5
-  typeRefoule: 0
-  refouleEffect: -10
+  enveloppeEffect: 10
+  typeLettre: 2
+  lettreEffect: -10
+  typeRefoule: 2
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

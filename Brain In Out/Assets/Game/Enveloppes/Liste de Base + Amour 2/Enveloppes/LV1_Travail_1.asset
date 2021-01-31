@@ -16,8 +16,10 @@ MonoBehaviour:
   contenu: Not having a job frees me from the ultra-liberal capitalist consumer society.
     I can play video games as much as I want!
   typeEnveloppe: 1
-  enveloppeEffect: 5
+  enveloppeEffect: 2
   typeLettre: 1
   lettreEffect: 5
-  "typeReffoul\xE9": 3
-  "Reffoul\xE9Effect": 0
+  typeRefoule: 1
+  refouleEffect: 0
+  remiseDansLeTas: 0
+  refoule: 0

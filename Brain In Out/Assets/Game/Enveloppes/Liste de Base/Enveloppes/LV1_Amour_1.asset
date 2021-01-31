@@ -15,10 +15,10 @@ MonoBehaviour:
   titre: I like being single
   contenu: 'I thought about that today: I like to just take care of myself.'
   typeEnveloppe: 0
-  enveloppeEffect: 5
+  enveloppeEffect: 2
   typeLettre: 0
   lettreEffect: 5
   typeRefoule: 0
-  refouleEffect: -10
+  refouleEffect: 0
   remiseDansLeTas: 0
   refoule: 0

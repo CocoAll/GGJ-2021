@@ -16,10 +16,10 @@ MonoBehaviour:
   contenu: I think about {storeMerch} all the time, it's good for business but it's
     not so good for my relationship.
   typeEnveloppe: 1
-  enveloppeEffect: 5
+  enveloppeEffect: 10
   typeLettre: 0
-  lettreEffect: -5
+  lettreEffect: -10
   typeRefoule: 0
-  refouleEffect: -10
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

@@ -19,6 +19,6 @@ MonoBehaviour:
   typeLettre: 2
   lettreEffect: 5
   typeRefoule: 2
-  refouleEffect: -10
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

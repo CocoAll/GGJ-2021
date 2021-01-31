@@ -18,8 +18,8 @@ MonoBehaviour:
   typeEnveloppe: 0
   enveloppeEffect: 0
   typeLettre: 0
-  lettreEffect: 5
+  lettreEffect: 10
   typeRefoule: 0
-  refouleEffect: -10
+  refouleEffect: 0
   remiseDansLeTas: 0
   refoule: 0

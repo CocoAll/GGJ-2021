@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Social_5
+  m_Name: LV2_Social_5
   m_EditorClassIdentifier: 
   titre: '{friendName} has been dumped again'
   contenu: '{friendName} is no longer in a relationship. I should do something.'
@@ -18,7 +18,7 @@ MonoBehaviour:
   enveloppeEffect: 0
   typeLettre: 2
   lettreEffect: 5
-  typeRefoule: 0
-  refouleEffect: -10
+  typeRefoule: 2
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

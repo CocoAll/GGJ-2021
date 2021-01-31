@@ -16,10 +16,10 @@ MonoBehaviour:
   contenu: Our relationship is great but we see each other so much that I see my
     friends less often than before.
   typeEnveloppe: 0
-  enveloppeEffect: 5
+  enveloppeEffect: 10
   typeLettre: 2
-  lettreEffect: -5
+  lettreEffect: -10
   typeRefoule: 2
-  refouleEffect: -10
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0

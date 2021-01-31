@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_2
+  m_Name: LV2_Travail_5
   m_EditorClassIdentifier: 
-  titre: Work went well
-  contenu: I broke my sales record today. I may well be employee of the month.
+  titre: I like to work
+  contenu: I had too much free time anyway. I really like doing something meaningfull.
+    Selling {storeMerch} is my favorite activity.
   typeEnveloppe: 1
-  enveloppeEffect: 5
+  enveloppeEffect: 2
   typeLettre: 1
   lettreEffect: 5
   typeRefoule: 1

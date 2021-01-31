@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Social_7
+  m_Name: LV2_Social_3
   m_EditorClassIdentifier: 
-  titre: My friend's crush
-  contenu: '{friendName} revealed to me his crush of the moment: it''s me. We talked
-    about it and it''s settled, we remain friends and it may even have strengthened
-    our friendship. {crushName}, on the other hand, took it rather badly.'
+  titre: Great afternoon with my group of friends
+  contenu: We all went to the {activity} together. I love them.
   typeEnveloppe: 2
-  enveloppeEffect: 5
-  typeLettre: 0
-  lettreEffect: -5
-  typeRefoule: 0
-  refouleEffect: -10
+  enveloppeEffect: 2
+  typeLettre: 2
+  lettreEffect: 5
+  typeRefoule: 2
+  refouleEffect: 0
   remiseDansLeTas: 0
   refoule: 0

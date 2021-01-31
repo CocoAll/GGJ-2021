@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_5
+  m_Name: LV2_Social_6
   m_EditorClassIdentifier: 
-  titre: I like to work
-  contenu: I had too much free time anyway. I really like doing something meaningfull.
-    Selling {StoreMerch} is my favorite activity.
-  typeEnveloppe: 1
-  enveloppeEffect: 5
+  titre: I like my colleagues
+  contenu: I didn't stop talking with my colleagues today, the time went by so fast
+    but on the other hand I wasn't very efficient.
+  typeEnveloppe: 2
+  enveloppeEffect: 10
   typeLettre: 1
-  lettreEffect: 5
+  lettreEffect: -10
   typeRefoule: 1
-  refouleEffect: 0
+  refouleEffect: -5
   remiseDansLeTas: 0
   refoule: 0
