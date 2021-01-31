@@ -45,3 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameRunning: {fileID: 11400000, guid: 604f7f258153498469206464efa94f1e, type: 2}
   isProcessingLetter: {fileID: 11400000, guid: 93e42c2b469971347b521576189a5abe, type: 2}
+  panelPause: {fileID: 0}
+  timerPanel: {fileID: 0}
+  audioSourceMusic: {fileID: 0}
+  tasEnveloppes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tasEnveloppesGlow:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

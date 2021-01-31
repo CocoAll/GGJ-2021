@@ -502,6 +502,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Input Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppes.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppes.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppes.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppes.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppes.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppesGlow.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppesGlow.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppesGlow.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppesGlow.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151835051669566965, guid: 01e1f811c307d9d46b454573251d2c01,
+        type: 3}
+      propertyPath: tasEnveloppesGlow.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6151835051669566966, guid: 01e1f811c307d9d46b454573251d2c01,
         type: 3}
       propertyPath: m_RootOrder
