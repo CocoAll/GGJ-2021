@@ -150,9 +150,9 @@ public class EnveloppeManager : MonoBehaviour
     
     public void RefouleCurrentLetter()
     {
+        corbeilleManager.GenerateBoullette();
         if (currentEnveloppe.value.refouleEffect >= 0) return;
 
-        corbeilleManager.GenerateBoullette();
         EnveloppeObject eo = Instantiate(currentEnveloppe.value);
         eo.refoule = true;
         this.listeRefoule.Add(eo);
