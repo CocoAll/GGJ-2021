@@ -7,17 +7,25 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private BooleanValue isProcessingLetter;
 
+    [SerializeField]
+    private GameObject panelPause;
+    [SerializeField]
+    private GameObject timerPanel;
+
+    private bool isOnPause;
+    private bool prePauseGameRunning;
     private EnveloppeManager em;
 
     private void Start()
     {
+        isOnPause = false;
         em = FindObjectOfType<EnveloppeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isOnPause)
         {
             //On récupère la position de la souris à l'écran
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -29,7 +37,19 @@ public class InputManager : MonoBehaviour
             {
                 ProcessClick(hit.collider.gameObject);
             }
-        }      
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isOnPause)
+            {
+                SetUpPause();
+            }
+            else
+            {
+                UnSetPause();
+            }
+        }
     }
 
     private void ProcessClick(GameObject go)
@@ -38,5 +58,22 @@ public class InputManager : MonoBehaviour
         {
            em.DrawEnveloppe();
         }
+    }
+
+    private void SetUpPause()
+    {
+        isOnPause = true;
+        panelPause.SetActive(true);
+        timerPanel.SetActive(false);
+        prePauseGameRunning = isGameRunning.Value; 
+        isGameRunning.Value = false;
+    }
+
+    public void UnSetPause()
+    {
+        isOnPause = false;
+        timerPanel.SetActive(true);
+        panelPause.SetActive(false);
+        isGameRunning.Value = prePauseGameRunning;
     }
 }
