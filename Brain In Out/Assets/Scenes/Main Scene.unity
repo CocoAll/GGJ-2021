@@ -356,9 +356,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d0b6e73d59daff4bac1020025cc79ff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.01
+  m_Volume: 0.075
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -653,6 +653,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1145906947}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: background
       value: 
       objectReference: {fileID: 1007250602}
@@ -664,6 +668,10 @@ PrefabInstance:
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 2145897958}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: startWorkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 446ddbec3c214ce4e9cc5d9c271f8811, type: 3}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: imagesYeux.Array.size
       value: 15
@@ -799,6 +807,16 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 949291479}
+    - target: {fileID: 4319624018786094893, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2145897958}
+    - target: {fileID: 4319624018786094893, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
+        type: 3}
+      propertyPath: mainMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
     - target: {fileID: 6700690418999620912, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
       propertyPath: panelPause

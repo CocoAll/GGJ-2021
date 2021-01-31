@@ -30,10 +30,15 @@ public class BetweenRoundManager : MonoBehaviour
     [SerializeField]
     private AudioClip musicClip;
 
+    [SerializeField]
+    private GameObject blackScreen;
+
     private IEnumerator AnimationDayPassing()
     {
+        blackScreen.SetActive(true);
         background.sprite = dayImage;
-
+        yield return new WaitForSeconds(0.5f);
+        blackScreen.SetActive(false);
         //Shuffle de la liste
         for (int i = imagesYeux.Count - 1; i > 0; i--)
         {
@@ -62,9 +67,13 @@ public class BetweenRoundManager : MonoBehaviour
         //On reset le volume
         musicSource.volume /= 2.5f;
 
+        blackScreen.SetActive(true);
+
         //On remet le fond de base
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1.2f);
         background.sprite = nightImage;
+
+        blackScreen.SetActive(false);
 
         //reset les sprite a null
         foreach (SpriteRenderer oeil in rendererYeux)

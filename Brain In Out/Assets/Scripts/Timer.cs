@@ -24,9 +24,14 @@ public class Timer : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip mainMusicClip;
+    [SerializeField]
+    private AudioClip stressMusicClip;
+
+    private EnveloppeManager em;
 
     private void Start()
     {
+        em = FindObjectOfType<EnveloppeManager>();
         timeRemaining = timeToWork;
     }
 
@@ -37,6 +42,15 @@ public class Timer : MonoBehaviour
         {
             if(timeRemaining > 0)
             {
+
+                if(timeRemaining < stressMusicClip.length && 
+                    audioSource.clip != stressMusicClip &&
+                    em.GetRemainingEnveloppesCount() >= 4)
+                {
+                    audioSource.clip = stressMusicClip;
+                    audioSource.Play();
+                }
+
                 timeRemaining -= Time.deltaTime;
             }
             else
@@ -55,7 +69,9 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     {
-        if(audioSource.clip != mainMusicClip)
+        if (timerIsRunning.Value == true) return;
+
+        if (audioSource.clip != mainMusicClip)
         {
             audioSource.Stop();
             audioSource.clip = mainMusicClip;
