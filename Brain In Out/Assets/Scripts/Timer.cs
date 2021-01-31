@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
             if(timeRemaining > 0)
             {
 
-                if(timeRemaining < stressMusicClip.length && 
+                if(timeRemaining <= stressMusicClip.length && 
                     audioSource.clip != stressMusicClip &&
                     em.GetRemainingEnveloppesCount() >= 4)
                 {

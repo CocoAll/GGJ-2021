@@ -16,6 +16,9 @@ public class InputManager : MonoBehaviour
     private bool prePauseGameRunning;
     private EnveloppeManager em;
 
+    [SerializeField]
+    private AudioSource audioSourceMusic;
+
     private void Start()
     {
         isOnPause = false;
@@ -60,12 +63,13 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    private void SetUpPause()
+    public void SetUpPause()
     {
         isOnPause = true;
         panelPause.SetActive(true);
         timerPanel.SetActive(false);
-        prePauseGameRunning = isGameRunning.Value; 
+        audioSourceMusic.Pause();
+         prePauseGameRunning = isGameRunning.Value; 
         isGameRunning.Value = false;
     }
 
@@ -74,6 +78,7 @@ public class InputManager : MonoBehaviour
         isOnPause = false;
         timerPanel.SetActive(true);
         panelPause.SetActive(false);
+        audioSourceMusic.Play();
         isGameRunning.Value = prePauseGameRunning;
     }
 }
