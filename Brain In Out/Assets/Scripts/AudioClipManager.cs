@@ -6,12 +6,13 @@ public class AudioClipManager : MonoBehaviour
 {
     [SerializeField]
     private AudioClip gameOverClip;
-
     [SerializeField]
     private AudioClip endOfRoundClip;
-
     [SerializeField]
     private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip buttonClick;
 
     [SerializeField]
     private AudioClip jingleAmour;
@@ -25,31 +26,40 @@ public class AudioClipManager : MonoBehaviour
 
     public void PlayGameOver()
     {
-        audioSource.Stop();
-        audioSource.PlayOneShot(gameOverClip);
+        audioSource.clip = gameOverClip;
+        audioSource.Play();
     }
 
     public void PlayEndOfRound()
     {
-        audioSource.Stop();
-        audioSource.PlayOneShot(endOfRoundClip);
+        audioSource.clip = endOfRoundClip;
+        audioSource.Play();
     }
 
     public void PlayEnveloppeJingle()
     {
-        audioSource.Stop();
         switch (currentEnveloppe.value.typeEnveloppe)
         {
             case TypeEnum.AMOUR:
-                audioSource.PlayOneShot(jingleAmour);
+                audioSource.clip = jingleAmour;
                 break;
             case TypeEnum.SOCIAL:
-                audioSource.PlayOneShot(jingleSocial);
+                audioSource.clip = jingleSocial;
                 break;
             case TypeEnum.TRAVAIL:
-                audioSource.PlayOneShot(jingleTravail);
+                audioSource.clip = jingleTravail;
                 break;
         }
+        audioSource.Play();
+    }
+
+    public void PlayButtonClick()
+    {
+        if ((audioSource.clip == endOfRoundClip || audioSource.clip == gameOverClip) && audioSource.isPlaying)
+            return;
+
+        audioSource.clip = buttonClick;
+        audioSource.Play();
     }
 
 }
