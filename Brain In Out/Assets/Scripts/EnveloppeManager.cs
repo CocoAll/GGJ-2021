@@ -46,6 +46,10 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private GameObject tas5Enveloppe;
 
+    //gestion de la corbeille
+    [SerializeField]
+    private CorbeilleManager corbeilleManager;
+
     private void Start()
     {
         listeRefoule = new List<EnveloppeObject>();
@@ -78,6 +82,7 @@ public class EnveloppeManager : MonoBehaviour
                 if(eo.typeRefoule == overwhelmedType.value)
                 {
                     enveloppes.Add(eo);
+                    corbeilleManager.DespawnBoullette();
                 }
             }
         }
@@ -147,6 +152,7 @@ public class EnveloppeManager : MonoBehaviour
     {
         if (currentEnveloppe.value.refouleEffect >= 0) return;
 
+        corbeilleManager.GenerateBoullette();
         EnveloppeObject eo = Instantiate(currentEnveloppe.value);
         eo.refoule = true;
         this.listeRefoule.Add(eo);
