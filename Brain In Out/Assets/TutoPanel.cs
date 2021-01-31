@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutoPanel : MonoBehaviour
 {
     public List<Sprite> tutos = new List<Sprite>();
-    public SpriteRenderer imageTarget;
+    public Image imageTarget;
     int index;
 
     private void Start()
