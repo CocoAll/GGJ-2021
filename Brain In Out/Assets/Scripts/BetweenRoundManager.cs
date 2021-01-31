@@ -21,6 +21,11 @@ public class BetweenRoundManager : MonoBehaviour
     [SerializeField]
     private SignalSender startRound;
 
+    [SerializeField]
+    private AudioSource musicSource;
+    [SerializeField]
+    private AudioClip magnetoClip;
+
     private IEnumerator AnimationDayPassing()
     {
         background.sprite = dayImage;
@@ -32,6 +37,11 @@ public class BetweenRoundManager : MonoBehaviour
             imagesYeux[i] = imagesYeux[r];
             imagesYeux[r] = tmp;
         }
+
+        musicSource.Stop();
+        musicSource.volume *= 2.5f;
+        musicSource.clip = magnetoClip;
+        musicSource.Play();
         for (int i = 0; i < imagesYeux.Count; i++)
         {
             foreach(SpriteRenderer oeil in rendererYeux)
@@ -40,6 +50,8 @@ public class BetweenRoundManager : MonoBehaviour
             }
             yield return new WaitForSeconds(0.2f);
         }
+        musicSource.Stop();
+        musicSource.volume /= 2.5f;
         yield return new WaitForSeconds(0.2f);
         background.sprite = nightImage;
         foreach (SpriteRenderer oeil in rendererYeux)
