@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
+  m_Name: LV1_Social_5
+  m_EditorClassIdentifier: 
+  titre: '{friendName} has been dumped again'
+  contenu: '{friendName} is no longer in a relationship. Maybe I should go see her/him
+    tomorrow to cheer her/him up?'
+  typeEnveloppe: 2
+  enveloppeEffect: 0
+  typeLettre: 2
+  lettreEffect: 5
+  typeRefoule: 0
+  refouleEffect: -10
+  remiseDansLeTas: 0
+  refoule: 0

@@ -29,6 +29,7 @@ public class LettreManager : MonoBehaviour
     private SignalSender onRoundEnd;
 
     private EnveloppeManager enveloppeManager;
+    
 
     [Header("Enveloppe/Lettre visuals")]
     [SerializeField]
@@ -50,6 +51,18 @@ public class LettreManager : MonoBehaviour
     [SerializeField]
     private IntValue jaugeSocial;
 
+    [Header("Letter Buttons")]
+    [SerializeField]
+    private GameObject lettreButton;
+    [SerializeField]
+    private GameObject choix;
+    [SerializeField]
+    private Text choiceText1;
+    [SerializeField]
+    private Text choiceText2;
+
+
+
     private List<string> namesList = new List<string> { "Alex", "Sam", "Camille", "Charlie", "Sasha", "Noor", "Amal", "Chams", "Billy", "Cameron", "Elliott", "Gabriel", "Jesse", "Reese", "Azato'th" };
     private List<string> friendsNamesList = new List<string> { "Amine", "Louis", "Theo", "Corentin", "Anna", "Anjuna", "Moïra", "Louise", "Paul", "Redoine", "Arnaud", "Jean-Michel Jam", "Nassim", "Thery", "Victor", "Ella", "Elisabeth", "Veronica", "Felix", "Kylian", "Anissa", "Loana", "Caroline", "Toby", "Marie", "Jeanne" };
     private List<string> irritatingBehaviourList = new List<string> { "broke a plate", "cooked the same meal", "forgot to turn off the lights", "chatted with that girl", "chatted with that boy", "used comic sans", "didn't answer me", "stepped on my foot", "made a bad joke" };
@@ -60,6 +73,10 @@ public class LettreManager : MonoBehaviour
     private List<string> secretList = new List<string> { " do ASMR videos", " like the taste of dog food", " pass out when I eat tofu", " don't know the Lord of the Rings", "'ve never played World of Warcraft", " hate Halloween", " like to drink other peoples' tears", " hate jazz music", " made up the whole story about meeting Toby Fox" };
     private string friendNameTemp;
     bool sameFriendName = false;
+    private string crushName1;
+    private string crushName2;
+    private string crushName;
+    private bool crushNameChosen = false;
 
     private void Start()
     {
@@ -189,18 +206,25 @@ public class LettreManager : MonoBehaviour
             letterText = currentEnveloppe.value.titre;
         else
             letterText = currentEnveloppe.value.contenu;
-        // crushName
         if (letterText.Contains("{crushName1}"))
         {
+
             string randomName = namesList[Random.Range(0, namesList.Count)];
             namesList.Remove(randomName);
             letterText = letterText.Replace("{crushName1}", randomName);
+            crushName1 = randomName;
             randomName = namesList[Random.Range(0, namesList.Count)];
             namesList.Remove(randomName);
             if (namesList.Count == 0)
                 namesList = new List<string> { "Alex", "Sam", "Camille", "Charlie", "Sasha", "Noor", "Amal", "Chams", "Billy", "Cameron", "Elliott", "Gabriel", "Jesse", "Reese", "Azato'th" };
             letterText = letterText.Replace("{crushName2}", randomName);
+            crushName2 = randomName;
+            crushChoice();
 
+        }
+        if (crushNameChosen && letterText.Contains("{crushName}"))
+        {
+            letterText = letterText.Replace("{crushName}", crushName);
         }
         if (letterText.Contains("{friendName}"))
         {
@@ -252,5 +276,25 @@ public class LettreManager : MonoBehaviour
             letterText = letterText.Replace("{storeMerch}", randomSecret);
         }
         return letterText;
+    }
+
+    private void crushChoice()
+    {
+        choix.SetActive(true);
+        choiceText1.text = crushName1;
+        choiceText2.text = crushName2;
+        lettreButton.SetActive(false);
+    }
+
+    public void CrushNameSelected(int choiceNumber)
+    {
+        if (choiceNumber == 1)
+            crushName = crushName1;
+        else if (choiceNumber == 2)
+            crushName = crushName2;
+        crushNameChosen = true;
+        // Change Deck :
+        enveloppeManager.ChangeDeckEnveloppe("amour", 2);
+
     }
 }

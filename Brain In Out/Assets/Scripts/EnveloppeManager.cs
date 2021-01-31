@@ -8,6 +8,8 @@ public class EnveloppeManager : MonoBehaviour
     //List des enveloppes de bases qui seront récurrentes
     [SerializeField]
     private List<ListEnveloppes> decksEnveloppes;
+    [SerializeField]
+    private List<ListEnveloppes> decksEnveloppesAmour2;
 
     [SerializeField]
     private List<EnveloppeObject> listeRefoule;
@@ -206,6 +208,14 @@ public class EnveloppeManager : MonoBehaviour
             tas3Enveloppe.SetActive(false);
             tas4Enveloppe.SetActive(false);
             tas5Enveloppe.SetActive(true);
+        }
+    }
+
+    public void ChangeDeckEnveloppe(string categorie, int lvl)
+    {
+        if (categorie == "amour" && lvl == 2)
+        {
+            decksEnveloppes = decksEnveloppesAmour2;
         }
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86616d288e828ef46891580a002ecb63, type: 3}
+  m_Name: Liste de Base + Amour2
+  m_EditorClassIdentifier: 
+  nbToDraw: 5
+  enveloppes:
+  - {fileID: 11400000, guid: 20f6e7a8d76598641be81916d312656b, type: 2}
+  - {fileID: 11400000, guid: 1e9e6c3986621ef45b805e656606f61e, type: 2}
+  - {fileID: 11400000, guid: 8f8494737207c9c48b71dba51fbb1322, type: 2}
+  - {fileID: 11400000, guid: 54755890c6c30aa4caf40c014c6c33cc, type: 2}
+  - {fileID: 11400000, guid: be0a4c7f7ff172742a8bd53edb45cd3d, type: 2}
+  - {fileID: 11400000, guid: 13ff410a40a15d449a4a516f6ed0c960, type: 2}
+  - {fileID: 11400000, guid: 2bc2121e720dca344892c8feac3ba630, type: 2}
+  - {fileID: 11400000, guid: 75601b47bd2f4304b8870e6952a1b210, type: 2}
+  - {fileID: 11400000, guid: 80c67c1763a84ed4380f5b4990bcb83f, type: 2}
+  - {fileID: 11400000, guid: 8239ffd500292694b8ef60516bfa35ff, type: 2}
+  - {fileID: 11400000, guid: f31af74fd3786bd45a59c65c95b8b6a7, type: 2}
+  - {fileID: 11400000, guid: 41461b392a300c94abfc9ce0ae27eec4, type: 2}
+  - {fileID: 11400000, guid: 1a1bd5632bd3e1942820c132bd3baae7, type: 2}

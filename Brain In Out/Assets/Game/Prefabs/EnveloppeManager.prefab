@@ -773,6 +773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decksEnveloppes:
   - {fileID: 11400000, guid: 31a81070989e97640acc97c7006f18fd, type: 2}
+  decksEnveloppesAmour2:
+  - {fileID: 11400000, guid: 73b3d22e083ffcf46a7e103b9ae0b1a8, type: 2}
+  - {fileID: 11400000, guid: e962c916004db7c429c1614ac23e8369, type: 2}
   listeRefoule: []
   enveloppes: []
   currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}
@@ -788,6 +791,7 @@ MonoBehaviour:
   tas3Enveloppe: {fileID: 337475105}
   tas4Enveloppe: {fileID: 120544546}
   tas5Enveloppe: {fileID: 1309198449}
+  corbeilleManager: {fileID: 0}
 --- !u!61 &7192928690377059313
 BoxCollider2D:
   m_ObjectHideFlags: 0
