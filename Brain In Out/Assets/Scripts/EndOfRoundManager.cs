@@ -22,6 +22,9 @@ public class EndOfRoundManager : MonoBehaviour
 
     private EnveloppeManager em;
 
+    [SerializeField]
+    private AudioClip endOfRoundClip;
+
     private void Start()
     {
         em = FindObjectOfType<EnveloppeManager>();

@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private SignalSender startRound;
+    [SerializeField]
+    private SignalSender gameOverSignal;
+    [SerializeField]
+    private AudioClip gameOverClip;
 
     private void Awake()
     {
@@ -36,14 +40,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start of Game Manager");
         StartGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update of Game Manager");
         if (jaugeAmour.Value <= 0 ||
         jaugeTravail.Value <= 0 ||
         jaugeSocial.Value <= 0)
@@ -54,7 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void StartRound()
     {
-        Debug.Log("StartRound of Game Manager");
         isGameRunning.Value = true;
         isProcessingEnveloppe.Value = false;
         startRound.Raise();
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
     
     private void ManageGameEnd()
     {
+        gameOverSignal.Raise();
         isGameRunning.Value = false;
         Time.timeScale = 0.0f;
         gameOverPanel.SetActive(true);

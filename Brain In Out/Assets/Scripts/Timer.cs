@@ -22,13 +22,11 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start of Timer");
         timeRemaining = timeToWork;
     }
 
     void Update()
     {
-        Debug.Log("Update of Timer");
         DisplayTimer();
         if (timerIsRunning.Value)
         {
@@ -47,13 +45,11 @@ public class Timer : MonoBehaviour
 
     public void ResetTimer()
     {
-        Debug.Log("ResetTimer of Timer");
         timeRemaining = timeToWork;
     }
 
     public void StartTimer()
     {
-        Debug.Log("StartTimer of Timer");
         timerIsRunning.Value = true;
     }
 
