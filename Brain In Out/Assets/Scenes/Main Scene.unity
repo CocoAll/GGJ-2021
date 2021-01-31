@@ -1057,6 +1057,11 @@ PrefabInstance:
       propertyPath: timerPanel
       value: 
       objectReference: {fileID: 1145906947}
+    - target: {fileID: 6700690418999620912, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
+        type: 3}
+      propertyPath: audioSourceMusic
+      value: 
+      objectReference: {fileID: 2145897958}
     - target: {fileID: 6700690419557635464, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
       propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
