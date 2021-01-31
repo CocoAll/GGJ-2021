@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 41725668}
   - component: {fileID: 41725669}
   m_Layer: 0
-  m_Name: Oeil  gauche
+  m_Name: affichage yeux
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,8 +151,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41725667}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.47, y: 1.39, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0017259645, y: -0.003233613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007250601}
@@ -205,7 +205,7 @@ SpriteRenderer:
   m_Size: {x: 6.0208335, y: 3.3867188}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &125692593 stripped
@@ -316,87 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ea1942122c93641a76e3b515ce5b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1831117092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1831117094}
-  - component: {fileID: 1831117093}
-  m_Layer: 0
-  m_Name: Oeil  droit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1831117093
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831117092}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 8a86b8ca7db7ec74e8583bfa7b324b80, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 6.0208335, y: 3.3867188}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1831117094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831117092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.73, y: 1.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1007250601}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1838753141 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1838753141, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
@@ -739,22 +658,86 @@ PrefabInstance:
       objectReference: {fileID: 1007250602}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: imagesYeux.Array.size
-      value: 3
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: rendererYeux.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: imagesYeux.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 8a86b8ca7db7ec74e8583bfa7b324b80,
+      objectReference: {fileID: 21300000, guid: 3a2c8295aa9a108429fdfaaba725c999,
         type: 3}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: imagesYeux.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: a1727fa71185f9f44a05b483b581c31b,
+      objectReference: {fileID: 21300000, guid: 204d6b00168bc8243af6eb2f5c370fd2,
         type: 3}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: imagesYeux.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 0c48dbaaf88c1da4ea486221cafb13c3,
+      objectReference: {fileID: 21300000, guid: dcc43b20b9c458d4eb4c4cd9d7d87221,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e5c1a4808542f146bfae3f2a0d56d61,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c1531ec5b3ac7947b3d2a506de4986d,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b7a207fbb0096640a7d16bf829c5e04,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 60bdc79cf405f0d4e8c0038044598660,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: b02df201cbe70884983144ab80c46ed9,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8466c5db1d6d88a41995ac73925d4ce8,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 52f4496524f7cf442b07ccefbe7b6887,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0862eebf1be247442953b244cf63276a,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e066891189bd6c478485303023126a3,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f5b2edc080b93743b83182f7f5ef34a,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f662424f4b87fb43bc141fcbc507151,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: imagesYeux.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 50b426ebbb7484849b10f34e5beb9653,
         type: 3}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: rendererYeux.Array.data[0]
@@ -763,7 +746,7 @@ PrefabInstance:
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: rendererYeux.Array.data[1]
       value: 
-      objectReference: {fileID: 1831117093}
+      objectReference: {fileID: 0}
     - target: {fileID: 1838753141, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: jingleNeutre
       value: 
