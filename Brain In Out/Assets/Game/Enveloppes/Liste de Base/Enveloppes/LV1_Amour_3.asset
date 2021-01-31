@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LV1_Amour_3
   m_EditorClassIdentifier: 
   titre: New crush
-  contenu: I can't decide between {girlName} and {boyName}, I find them both attractive.
-    Who should I choose?
+  contenu: I can't decide between {crushName1} and {crushName2}, I find them both
+    attractive. Who should I choose?
   typeEnveloppe: 0
   enveloppeEffect: 0
   typeLettre: 0

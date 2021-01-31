@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: LV1_Social_2
   m_EditorClassIdentifier: 
   titre: '{friendName} was late again'
-  contenu: '{friendName} was {2,5,10,30} minutes late on our appointment time, I''m
-    tired of him not apologizing.'
+  contenu: '{friendName} was 30 minutes late on our appointment time, I''m tired
+    of him not apologizing.'
   typeEnveloppe: 2
   enveloppeEffect: -5
   typeLettre: 2
   lettreEffect: -5
-  "typeReffoul\xE9": 3
-  "Reffoul\xE9Effect": 0
+  typeRefoule: 0
+  refouleEffect: 0
+  remiseDansLeTas: 0
+  refoule: 0

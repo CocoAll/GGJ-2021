@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: LV1_Social_4
   m_EditorClassIdentifier: 
   titre: '{friendName} told the group one of my secrets.'
-  contenu: Everyone now knows that I {secret}. Thank you {friendName}...
+  contenu: Everyone now knows that I{secret}. Thank you {friendName}...
   typeEnveloppe: 2
   enveloppeEffect: -5
   typeLettre: 2
   lettreEffect: -5
-  typeReffoule: 0
-  ReffouleEffect: 0
+  typeRefoule: 0
+  refouleEffect: 0
+  remiseDansLeTas: 0
+  refoule: 0
