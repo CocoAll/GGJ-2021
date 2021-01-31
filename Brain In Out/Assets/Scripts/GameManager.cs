@@ -20,7 +20,18 @@ public class GameManager : MonoBehaviour
     private BooleanValue isProcessingEnveloppe;
 
     [SerializeField]
+    private GameObject gameOverPanel;
+
+    [SerializeField]
     private SignalSender startRound;
+
+    private void Awake()
+    {
+        Time.timeScale = 1.0f;
+        jaugeAmour.ResetValue();
+        jaugeTravail.ResetValue();
+        jaugeSocial.ResetValue();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +48,7 @@ public class GameManager : MonoBehaviour
         jaugeTravail.Value <= 0 ||
         jaugeSocial.Value <= 0)
         {
-            //Game Over
+            ManageGameEnd();
         }
     }
 
@@ -53,15 +64,12 @@ public class GameManager : MonoBehaviour
     {
         startRound.Raise();
     }
-
-    private void ManageRoundEnd()
-    {
-
-    }
     
     private void ManageGameEnd()
     {
-
+        isGameRunning.Value = false;
+        Time.timeScale = 0.0f;
+        gameOverPanel.SetActive(true);
     }
 
 }

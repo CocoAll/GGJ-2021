@@ -10,6 +10,11 @@ public class IntValue : ScriptableObject
     private int value;
     public int Value { get { return value; } set { this.value = value; } }
 
+    public void ResetValue()
+    {
+        this.value = defaultValue;
+    }
+
     private void OnEnable()
     {
         value = defaultValue;
