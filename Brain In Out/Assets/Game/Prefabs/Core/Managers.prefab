@@ -50,6 +50,7 @@ MonoBehaviour:
   gameOverClip: {fileID: 8300000, guid: bc93309c5f27c3e448760384ddd95a3e, type: 3}
   endOfRoundClip: {fileID: 8300000, guid: fcc1bf2a384d71d44a1a4ce435fd8467, type: 3}
   audioSource: {fileID: 1838753140}
+  buttonClick: {fileID: 8300000, guid: 68f973d1ec42276458708793a45b3ef4, type: 3}
   jingleAmour: {fileID: 8300000, guid: 6dcdf4c32ee655f49a7f130040d9c0c1, type: 3}
   jingleTravail: {fileID: 8300000, guid: e9d5883fdbe2662469a00f7a54595617, type: 3}
   jingleSocial: {fileID: 8300000, guid: 5be848dc6f6e3454d98778f608e7046a, type: 3}
@@ -749,6 +750,17 @@ PrefabInstance:
       propertyPath: tas1Enveloppe
       value: 
       objectReference: {fileID: 3897416447611284831}
+    - target: {fileID: 4701326204873165441, guid: 16d776b2157700f4bb8d7303ab316d87,
+        type: 3}
+      propertyPath: decksEnveloppes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701326204873165441, guid: 16d776b2157700f4bb8d7303ab316d87,
+        type: 3}
+      propertyPath: decksEnveloppes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e962c916004db7c429c1614ac23e8369,
+        type: 2}
     - target: {fileID: 4701326204873165442, guid: 16d776b2157700f4bb8d7303ab316d87,
         type: 3}
       propertyPath: m_Name
