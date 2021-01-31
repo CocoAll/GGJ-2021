@@ -50,7 +50,6 @@ public class BetweenRoundManager : MonoBehaviour
 
         //Set up audio magneto
         musicSource.Stop();
-        musicSource.volume *= 2.5f;
         musicSource.clip = magnetoClip;
         musicSource.loop = false;
         musicSource.Play();
@@ -64,8 +63,6 @@ public class BetweenRoundManager : MonoBehaviour
             }
             yield return new WaitForSeconds(0.2f);
         }
-        //On reset le volume
-        musicSource.volume /= 2.5f;
 
         StartCoroutine(SetUpMusicPreparation());
         blackScreen.SetActive(true);
