@@ -44,14 +44,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed718afaff51c24fbf3019623011d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayImage: {fileID: 21300000, guid: eb6e55adb3d0bdc4ebe901a47a0254c8, type: 3}
-  nightImage: {fileID: 21300000, guid: 7c52a77295f49944f956bbcff8a1e629, type: 3}
-  imagesYeux: []
+  dayImage: {fileID: 21300000, guid: 2fb968c2f755865409bfbc9140bb3e04, type: 3}
+  nightImage: {fileID: 21300000, guid: 38a4986f20afc52479accdaf49f949b9, type: 3}
+  imagesYeux:
+  - {fileID: 21300000, guid: 3a2c8295aa9a108429fdfaaba725c999, type: 3}
+  - {fileID: 21300000, guid: 204d6b00168bc8243af6eb2f5c370fd2, type: 3}
+  - {fileID: 21300000, guid: dcc43b20b9c458d4eb4c4cd9d7d87221, type: 3}
+  - {fileID: 21300000, guid: 4e5c1a4808542f146bfae3f2a0d56d61, type: 3}
+  - {fileID: 21300000, guid: 7c1531ec5b3ac7947b3d2a506de4986d, type: 3}
+  - {fileID: 21300000, guid: 0b7a207fbb0096640a7d16bf829c5e04, type: 3}
+  - {fileID: 21300000, guid: 60bdc79cf405f0d4e8c0038044598660, type: 3}
+  - {fileID: 21300000, guid: b02df201cbe70884983144ab80c46ed9, type: 3}
+  - {fileID: 21300000, guid: 8466c5db1d6d88a41995ac73925d4ce8, type: 3}
+  - {fileID: 21300000, guid: 52f4496524f7cf442b07ccefbe7b6887, type: 3}
+  - {fileID: 21300000, guid: 0862eebf1be247442953b244cf63276a, type: 3}
+  - {fileID: 21300000, guid: 7e066891189bd6c478485303023126a3, type: 3}
+  - {fileID: 21300000, guid: 3f5b2edc080b93743b83182f7f5ef34a, type: 3}
+  - {fileID: 21300000, guid: 1f662424f4b87fb43bc141fcbc507151, type: 3}
+  - {fileID: 21300000, guid: 50b426ebbb7484849b10f34e5beb9653, type: 3}
   rendererYeux:
-  - {fileID: 0}
   - {fileID: 0}
   background: {fileID: 0}
   startRound: {fileID: 11400000, guid: 00f590c50f802884aae403eca8a4b3d0, type: 2}
+  musicSource: {fileID: 0}
+  magnetoClip: {fileID: 8300000, guid: c99bf3fdd8b18da428b56de1e9792de9, type: 3}
+  startWorkClip: {fileID: 8300000, guid: 446ddbec3c214ce4e9cc5d9c271f8811, type: 3}
+  musicClip: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
+  blackScreen: {fileID: 0}
 --- !u!114 &1167367668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +152,7 @@ MonoBehaviour:
   jingleAmour: {fileID: 8300000, guid: 6dcdf4c32ee655f49a7f130040d9c0c1, type: 3}
   jingleTravail: {fileID: 8300000, guid: e9d5883fdbe2662469a00f7a54595617, type: 3}
   jingleSocial: {fileID: 8300000, guid: 5be848dc6f6e3454d98778f608e7046a, type: 3}
-  jingleNeutre: {fileID: 0}
+  jingleNeutre: {fileID: 8300000, guid: 7fe859ba607ab7040a6ac87c3bb6fc9b, type: 3}
   currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}
 --- !u!82 &1838753140
 AudioSource:
@@ -1023,6 +1042,16 @@ PrefabInstance:
       propertyPath: timeToWork
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7426366824517708559, guid: 5deb9297e04a0ea429dc6db8802d4c5d,
+        type: 3}
+      propertyPath: mainMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
+    - target: {fileID: 7426366824517708559, guid: 5deb9297e04a0ea429dc6db8802d4c5d,
+        type: 3}
+      propertyPath: stressMusicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f9bb0d7cde4cce44b9e2637a9887e52, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5deb9297e04a0ea429dc6db8802d4c5d, type: 3}
 --- !u!1 &4319624018786094892 stripped
