@@ -61,7 +61,8 @@ public class LettreManager : MonoBehaviour
     [SerializeField]
     private Text choiceText2;
 
-
+    [SerializeField]
+    private GameObject refoule;
 
     private List<string> namesList = new List<string> { "Alex", "Sam", "Camille", "Charlie", "Sasha", "Noor", "Amal", "Chams", "Billy", "Cameron", "Elliott", "Gabriel", "Jesse", "Reese", "Azato'th" };
     private List<string> friendsNamesList = new List<string> { "Amine", "Louis", "Theo", "Corentin", "Anna", "Anjuna", "Moïra", "Louise", "Paul", "Redoine", "Arnaud", "Jean-Michel Jam", "Nassim", "Thery", "Victor", "Ella", "Elisabeth", "Veronica", "Felix", "Kylian", "Anissa", "Loana", "Caroline", "Toby", "Marie", "Jeanne" };
@@ -184,6 +185,14 @@ public class LettreManager : MonoBehaviour
     public void SetUpLettre()
     {
         lettreTexte.text = FillRandomTextElements();
+        if (currentEnveloppe.value.refoule)
+        {
+            refoule.SetActive(true);
+        }
+        else
+        {
+            refoule.SetActive(false);
+        }
         lettreObject.SetActive(true);
     }
 
