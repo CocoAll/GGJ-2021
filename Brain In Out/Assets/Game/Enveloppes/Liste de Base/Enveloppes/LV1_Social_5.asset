@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: LV1_Social_5
   m_EditorClassIdentifier: 
   titre: '{friendName} has been dumped again'
-  contenu: '{friendName} is no longer in a relationship. Maybe I should go see her/him
-    tomorrow to cheer her/him up?'
+  contenu: '{friendName} is no longer in a relationship. I should do something.'
   typeEnveloppe: 2
   enveloppeEffect: 0
   typeLettre: 2
   lettreEffect: 5
-  typeRefoule: 0
+  typeRefoule: 2
   refouleEffect: -10
   remiseDansLeTas: 0
   refoule: 0

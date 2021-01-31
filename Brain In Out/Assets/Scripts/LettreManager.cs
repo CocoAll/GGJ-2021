@@ -76,7 +76,13 @@ public class LettreManager : MonoBehaviour
     private string crushName1;
     private string crushName2;
     private string crushName;
+    private string storeMerch1;
+    private string storeMerch2;
+    private string storeMerch;
     private bool crushNameChosen = false;
+    private bool jobChosen = false;
+    private bool crushSelection = false;
+    private bool workSelection = false;
 
     private void Start()
     {
@@ -219,7 +225,7 @@ public class LettreManager : MonoBehaviour
                 namesList = new List<string> { "Alex", "Sam", "Camille", "Charlie", "Sasha", "Noor", "Amal", "Chams", "Billy", "Cameron", "Elliott", "Gabriel", "Jesse", "Reese", "Azato'th" };
             letterText = letterText.Replace("{crushName2}", randomName);
             crushName2 = randomName;
-            crushChoice();
+            CrushChoice();
 
         }
         if (crushNameChosen && letterText.Contains("{crushName}"))
@@ -272,29 +278,69 @@ public class LettreManager : MonoBehaviour
         }
         if (letterText.Contains("{storeMerch}"))
         {
-            string randomSecret = storeMerchList[Random.Range(0, storeMerchList.Count)];
-            letterText = letterText.Replace("{storeMerch}", randomSecret);
+            letterText = letterText.Replace("{storeMerch}", storeMerch);
+        }
+        if (letterText.Contains("{storeMerch1}"))
+        {
+            string randomMerch = storeMerchList[Random.Range(0, storeMerchList.Count)];
+            storeMerchList.Remove(randomMerch);
+            letterText = letterText.Replace("{storeMerch1}", randomMerch);
+            storeMerch1 = randomMerch;
+            randomMerch = storeMerchList[Random.Range(0, storeMerchList.Count)];
+            storeMerchList.Remove(randomMerch);
+            if (storeMerchList.Count == 0)
+                storeMerchList = new List<string> { "fish", "shoe", "DVD", "poster", "video game", "hair dryer", "sauce", "phone", "needle", "blanket", "glass", "balloon" };
+            letterText = letterText.Replace("{storeMerch2}", randomMerch);
+            storeMerch2 = randomMerch;
+            JobChoice();
         }
         return letterText;
     }
 
-    private void crushChoice()
+    private void CrushChoice()
     {
         choix.SetActive(true);
         choiceText1.text = crushName1;
         choiceText2.text = crushName2;
         lettreButton.SetActive(false);
+        crushSelection = true;
+        
     }
 
-    public void CrushNameSelected(int choiceNumber)
+    public void JobChoice()
     {
-        if (choiceNumber == 1)
-            crushName = crushName1;
-        else if (choiceNumber == 2)
-            crushName = crushName2;
-        crushNameChosen = true;
-        // Change Deck :
-        enveloppeManager.ChangeDeckEnveloppe("amour", 2);
+        choix.SetActive(true);
+        choiceText1.text = storeMerch1;
+        choiceText2.text = storeMerch2;
+        lettreButton.SetActive(false);
+        workSelection = true;
+    }
+
+    public void ChoiceSelected(int choiceNumber)
+    {
+        if (crushSelection == true)
+        {
+            if (choiceNumber == 1)
+                crushName = crushName1;
+            else if (choiceNumber == 2)
+                crushName = crushName2;
+            crushNameChosen = true;
+            // Change Deck :
+            enveloppeManager.ChangeDeckEnveloppe("amour", 2);
+            crushSelection = false;
+        }
+        else if (workSelection == true)
+        {
+            if (choiceNumber == 1)
+                storeMerch = storeMerch1;
+            else if (choiceNumber == 2)
+                storeMerch = storeMerch2;
+            jobChosen = true;
+            enveloppeManager.ChangeDeckEnveloppe("travail", 2);
+            workSelection = false;
+        }
+
 
     }
+
 }

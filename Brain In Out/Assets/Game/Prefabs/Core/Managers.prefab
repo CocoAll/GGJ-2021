@@ -133,6 +133,7 @@ MonoBehaviour:
   jingleAmour: {fileID: 8300000, guid: 6dcdf4c32ee655f49a7f130040d9c0c1, type: 3}
   jingleTravail: {fileID: 8300000, guid: e9d5883fdbe2662469a00f7a54595617, type: 3}
   jingleSocial: {fileID: 8300000, guid: 5be848dc6f6e3454d98778f608e7046a, type: 3}
+  jingleNeutre: {fileID: 0}
   currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}
 --- !u!82 &1838753140
 AudioSource:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86616d288e828ef46891580a002ecb63, type: 3}
   m_Name: Liste de Base + Amour2
   m_EditorClassIdentifier: 
-  nbToDraw: 5
+  nbToDraw: 6
   enveloppes:
   - {fileID: 11400000, guid: 20f6e7a8d76598641be81916d312656b, type: 2}
   - {fileID: 11400000, guid: 1e9e6c3986621ef45b805e656606f61e, type: 2}

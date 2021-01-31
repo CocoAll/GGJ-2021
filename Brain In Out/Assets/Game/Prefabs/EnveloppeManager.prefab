@@ -776,6 +776,12 @@ MonoBehaviour:
   decksEnveloppesAmour2:
   - {fileID: 11400000, guid: 73b3d22e083ffcf46a7e103b9ae0b1a8, type: 2}
   - {fileID: 11400000, guid: e962c916004db7c429c1614ac23e8369, type: 2}
+  decksEnveloppesTravail2:
+  - {fileID: 11400000, guid: 1fa81cc644377034091240e679303fdf, type: 2}
+  - {fileID: 11400000, guid: e962c916004db7c429c1614ac23e8369, type: 2}
+  decksEnveloppesComplet:
+  - {fileID: 11400000, guid: ea49d229f4f41334393d476583026008, type: 2}
+  - {fileID: 11400000, guid: e962c916004db7c429c1614ac23e8369, type: 2}
   listeRefoule: []
   enveloppes: []
   currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}

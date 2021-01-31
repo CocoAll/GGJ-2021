@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
   m_Name: LV1_Travail_3
   m_EditorClassIdentifier: 
-  titre: I need to get a job
-  contenu: 'I''m starting to be short on money and two stores have offered me a job:
-    a {storeMerch1} store and a {storeMerch2} store. Which one to choose?'
+  titre: What a boring day at work.
+  contenu: I had 3 clients. So no one is interested in {storeMerch} today?
   typeEnveloppe: 1
-  enveloppeEffect: 0
+  enveloppeEffect: -5
   typeLettre: 1
-  lettreEffect: 5
+  lettreEffect: -5
   typeRefoule: 0
   refouleEffect: -10
   remiseDansLeTas: 0

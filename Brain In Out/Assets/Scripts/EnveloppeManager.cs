@@ -10,6 +10,10 @@ public class EnveloppeManager : MonoBehaviour
     private List<ListEnveloppes> decksEnveloppes;
     [SerializeField]
     private List<ListEnveloppes> decksEnveloppesAmour2;
+    [SerializeField]
+    private List<ListEnveloppes> decksEnveloppesTravail2;
+    [SerializeField]
+    private List<ListEnveloppes> decksEnveloppesComplet;
 
     [SerializeField]
     private List<EnveloppeObject> listeRefoule;
@@ -51,6 +55,9 @@ public class EnveloppeManager : MonoBehaviour
     //gestion de la corbeille
     [SerializeField]
     private CorbeilleManager corbeilleManager;
+
+    private bool workLvl2 = false;
+    private bool loveLvl2 = false;
 
     private void Start()
     {
@@ -216,6 +223,16 @@ public class EnveloppeManager : MonoBehaviour
         if (categorie == "amour" && lvl == 2)
         {
             decksEnveloppes = decksEnveloppesAmour2;
+            loveLvl2 = true;
+        }
+        if (categorie == "travail" && lvl == 2)
+        {
+            decksEnveloppes = decksEnveloppesTravail2;
+            workLvl2 = true;
+        }
+        if (workLvl2 && loveLvl2)
+        {
+            decksEnveloppes = decksEnveloppesComplet;
         }
     }
 }

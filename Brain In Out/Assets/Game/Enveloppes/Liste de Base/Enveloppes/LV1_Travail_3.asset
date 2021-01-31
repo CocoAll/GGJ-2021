@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: LV1_Travail_3
   m_EditorClassIdentifier: 
   titre: I need to get a job
-  contenu: I'm starting to be short on money, I should probably look for a job tomorrow.
+  contenu: 'I''m starting to be short on money and two stores have offered me a job:
+    a {storeMerch1} store and a {storeMerch2} store. Which one to choose?'
   typeEnveloppe: 1
   enveloppeEffect: 0
   typeLettre: 1
   lettreEffect: 5
-  typeRefoule: 0
+  typeRefoule: 1
   refouleEffect: -10
   remiseDansLeTas: 0
   refoule: 0

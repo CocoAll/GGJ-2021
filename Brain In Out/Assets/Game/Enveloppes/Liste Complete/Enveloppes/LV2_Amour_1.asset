@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_3
+  m_Name: LV2_Amour_1
   m_EditorClassIdentifier: 
-  titre: I need to get a job
-  contenu: 'I''m starting to be short on money and two stores have offered me a job:
-    a {storeMerch1} store and a {storeMerch2} store. Which one to choose?'
-  typeEnveloppe: 1
-  enveloppeEffect: 0
-  typeLettre: 1
-  lettreEffect: 5
+  titre: I miss being single
+  contenu: Sometimes I feel the urge to have fewer hugs and kisses
+  typeEnveloppe: 0
+  enveloppeEffect: -5
+  typeLettre: 0
+  lettreEffect: -5
   typeRefoule: 0
   refouleEffect: -10
   remiseDansLeTas: 0

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b427d70522604cb3bb3a394db0864, type: 3}
-  m_Name: LV1_Travail_3
+  m_Name: LV1_Social_6
   m_EditorClassIdentifier: 
-  titre: I need to get a job
-  contenu: 'I''m starting to be short on money and two stores have offered me a job:
-    a {storeMerch1} store and a {storeMerch2} store. Which one to choose?'
-  typeEnveloppe: 1
-  enveloppeEffect: 0
+  titre: I like my colleagues
+  contenu: I didn't stop talking with my colleagues today, the time went by so fast
+    but on the other hand I wasn't very efficient.
+  typeEnveloppe: 2
+  enveloppeEffect: 5
   typeLettre: 1
-  lettreEffect: 5
-  typeRefoule: 0
+  lettreEffect: -5
+  typeRefoule: 1
   refouleEffect: -10
   remiseDansLeTas: 0
   refoule: 0
