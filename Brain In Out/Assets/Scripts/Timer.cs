@@ -75,6 +75,7 @@ public class Timer : MonoBehaviour
         {
             audioSource.Stop();
             audioSource.clip = mainMusicClip;
+            audioSource.loop = true;
             audioSource.Play();
         }
         timerIsRunning.Value = true;
