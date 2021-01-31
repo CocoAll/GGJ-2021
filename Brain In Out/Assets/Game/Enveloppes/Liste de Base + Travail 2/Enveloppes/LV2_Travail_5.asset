@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titre: I like to work
   contenu: I had too much free time anyway. I really like doing something meaningfull.
-    Selling {StoreMerch} is my favorite activity.
+    Selling {storeMerch} is my favorite activity.
   typeEnveloppe: 1
   enveloppeEffect: 2
   typeLettre: 1

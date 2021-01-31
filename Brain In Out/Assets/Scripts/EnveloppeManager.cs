@@ -32,6 +32,8 @@ public class EnveloppeManager : MonoBehaviour
     [SerializeField]
     private IntValue jaugeSocial;
 
+    private JaugeManager jaugeManager;
+
     [SerializeField]
     private BooleanValue isProcessingEnveloppe;
 
@@ -63,6 +65,7 @@ public class EnveloppeManager : MonoBehaviour
 
     private void Start()
     {
+        jaugeManager = FindObjectOfType<JaugeManager>();
         listeRefoule = new List<EnveloppeObject>();
     }
 
@@ -166,6 +169,10 @@ public class EnveloppeManager : MonoBehaviour
     
     public void RefouleCurrentLetter()
     {
+        jaugeAmour.Value --;
+        jaugeTravail.Value --;
+        jaugeSocial.Value --;
+        jaugeManager.UpdateJauges();
         corbeilleManager.GenerateBoullette();
         if (currentEnveloppe.value.refouleEffect >= 0) return;
 
