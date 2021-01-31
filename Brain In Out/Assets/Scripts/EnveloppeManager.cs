@@ -59,6 +59,8 @@ public class EnveloppeManager : MonoBehaviour
     private bool workLvl2 = false;
     private bool loveLvl2 = false;
 
+    private int nbOfRound = 0;
+
     private void Start()
     {
         listeRefoule = new List<EnveloppeObject>();
@@ -67,11 +69,16 @@ public class EnveloppeManager : MonoBehaviour
     //Remplissage de la liste d'enveloppes a traiter
     public void FillEnveloppes()
     {
+        nbOfRound++;
         enveloppes = new List<EnveloppeObject>();
         foreach (ListEnveloppes le in decksEnveloppes)
         {
             int nbCurrentBaseEnveloppes = 0;
-            while (nbCurrentBaseEnveloppes < le.nbToDraw)
+            int finalNbToDraw = le.nbToDraw + (nbOfRound / 2);
+            if(finalNbToDraw > le.enveloppes.Count-2){
+                finalNbToDraw = le.enveloppes.Count - 2;
+            }
+            while (nbCurrentBaseEnveloppes < finalNbToDraw)
             {
                 EnveloppeObject eo = le.enveloppes[Random.Range(0, le.enveloppes.Count)];
                 if (!enveloppes.Contains(eo))

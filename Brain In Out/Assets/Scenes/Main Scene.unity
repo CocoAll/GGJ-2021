@@ -749,7 +749,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7c52a77295f49944f956bbcff8a1e629,
+      objectReference: {fileID: 21300000, guid: 38a4986f20afc52479accdaf49f949b9,
         type: 3}
     - target: {fileID: 2643467914233152414, guid: b74d56f6e107e124bb9cc60ac3651aa3,
         type: 3}
@@ -770,6 +770,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766581350633111507, guid: b74d56f6e107e124bb9cc60ac3651aa3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766581350633111507, guid: b74d56f6e107e124bb9cc60ac3651aa3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 6349254022073585540, guid: b74d56f6e107e124bb9cc60ac3651aa3,
         type: 3}
@@ -869,6 +879,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1145906947}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: dayImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 2fb968c2f755865409bfbc9140bb3e04,
+        type: 3}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: musicClip
       value: 
       objectReference: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
@@ -876,6 +891,11 @@ PrefabInstance:
       propertyPath: background
       value: 
       objectReference: {fileID: 1007250602}
+    - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: nightImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 38a4986f20afc52479accdaf49f949b9,
+        type: 3}
     - target: {fileID: 1167367669, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: blackScreen
       value: 
@@ -1030,7 +1050,7 @@ PrefabInstance:
     - target: {fileID: 4319624018786094893, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
       propertyPath: timeToWork
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4319624018786094893, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
@@ -1057,6 +1077,11 @@ PrefabInstance:
       propertyPath: timerPanel
       value: 
       objectReference: {fileID: 1145906947}
+    - target: {fileID: 6700690418999620912, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
+        type: 3}
+      propertyPath: audioSourceMusic
+      value: 
+      objectReference: {fileID: 2145897958}
     - target: {fileID: 6700690419557635464, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
       propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1293,6 +1318,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: End of the round
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2145897958}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706532072328446845, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8706532072681914799, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
