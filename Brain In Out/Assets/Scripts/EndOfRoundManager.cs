@@ -59,7 +59,11 @@ public class EndOfRoundManager : MonoBehaviour
         ret += "\n\n\n";
 
         scoreText.text = ret;
-    }
+
+        previousAmourValue = jaugeAmour.Value;
+        previousSocialValue = jaugeSocial.Value;
+        previousTravailValue = jaugeTravail.Value;
+}
 
     private void ApplyBonusMalus()
     {
