@@ -499,7 +499,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c90ecd95fffedf4f9a2ea5608152419, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.075
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -928,6 +928,30 @@ PrefabInstance:
       propertyPath: rendererYeux.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2145897958}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838753139, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1838753141, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
       propertyPath: jingleNeutre
       value: 
@@ -1285,9 +1309,44 @@ PrefabInstance:
       objectReference: {fileID: 1838753141}
     - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2145897958}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975477719621428370, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7157682680235469493, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -1362,6 +1421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157682681801852306, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7157682682078852239, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
