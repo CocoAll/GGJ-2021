@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     private SignalSender startRound;
     [SerializeField]
     private SignalSender gameOverSignal;
-    [SerializeField]
-    private AudioClip gameOverClip;
+
+    private bool isGameOver;
 
     private void Awake()
     {
@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (jaugeAmour.Value <= 0 ||
+        if ((jaugeAmour.Value <= 0 ||
         jaugeTravail.Value <= 0 ||
-        jaugeSocial.Value <= 0)
+        jaugeSocial.Value <= 0) && !isGameOver)
         {
             ManageGameEnd();
         }
@@ -63,14 +63,15 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        isGameOver = false;
         startRound.Raise();
     }
     
     private void ManageGameEnd()
     {
+        isGameOver = true;
         gameOverSignal.Raise();
         isGameRunning.Value = false;
-        Time.timeScale = 0.0f;
         gameOverPanel.SetActive(true);
     }
 

@@ -55,7 +55,6 @@ public class EnveloppeManager : MonoBehaviour
     public void FillEnveloppes()
     {
         enveloppes = new List<EnveloppeObject>();
-        Debug.Log("FillEnveloppes of EnveloppeManager");
         foreach (ListEnveloppes le in decksEnveloppes)
         {
             int nbCurrentBaseEnveloppes = 0;
@@ -124,7 +123,6 @@ public class EnveloppeManager : MonoBehaviour
 
     public void DrawEnveloppe()
     {
-        Debug.Log("DrawEnveloppes of EnveloppeManager");
         if (enveloppes == null || isProcessingEnveloppe.Value || enveloppes.Count == 0) return;
 
         this.currentEnveloppe.value = enveloppes[enveloppes.Count-1];
@@ -136,20 +134,17 @@ public class EnveloppeManager : MonoBehaviour
 
     public int GetRemainingEnveloppesCount()
     {
-        Debug.Log("GetRemainingEnveloppesCount of EnveloppeManager");
         return this.enveloppes.Count;
     }
 
     public void ReinsertCurrentLetter()
     {
-        Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
         currentEnveloppe.value.remiseDansLeTas = true;
         this.enveloppes.Insert(0, currentEnveloppe.value);
     }
     
     public void RefouleCurrentLetter()
     {
-        Debug.Log("ReinsertCurrentLetter of EnveloppeManager");
         if (currentEnveloppe.value.refouleEffect >= 0) return;
 
         EnveloppeObject eo = Instantiate(currentEnveloppe.value);
