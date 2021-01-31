@@ -21,6 +21,8 @@ public class AudioClipManager : MonoBehaviour
     [SerializeField]
     private AudioClip jingleSocial;
     [SerializeField]
+    private AudioClip jingleNeutre;
+    [SerializeField]
     private CurrentEnveloppe currentEnveloppe;
 
 
@@ -48,6 +50,9 @@ public class AudioClipManager : MonoBehaviour
                 break;
             case TypeEnum.TRAVAIL:
                 audioSource.clip = jingleTravail;
+                break;
+            case TypeEnum.NEUTRE:
+                audioSource.clip = jingleNeutre;
                 break;
         }
         audioSource.Play();

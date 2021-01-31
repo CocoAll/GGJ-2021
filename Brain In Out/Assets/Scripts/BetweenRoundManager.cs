@@ -24,7 +24,6 @@ public class BetweenRoundManager : MonoBehaviour
     private IEnumerator AnimationDayPassing()
     {
         background.sprite = dayImage;
-        yield return new WaitForSeconds(0.05f);
         for (int i = 0; i < imagesYeux.Count; i++)
         {
             foreach(SpriteRenderer oeil in rendererYeux)
