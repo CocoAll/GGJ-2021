@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: rendererYeux.Array.data[1]
       value: 
       objectReference: {fileID: 1831117093}
+    - target: {fileID: 1838753141, guid: 7b5a40e5fd416d84b944e9fd15d48a49, type: 3}
+      propertyPath: jingleNeutre
+      value: 
+      objectReference: {fileID: 8300000, guid: 7fe859ba607ab7040a6ac87c3bb6fc9b, type: 3}
     - target: {fileID: 1675942714442884074, guid: 7b5a40e5fd416d84b944e9fd15d48a49,
         type: 3}
       propertyPath: goJaugeAmour
@@ -902,10 +906,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1580923795}
-    - target: {fileID: 897227688, guid: b5ec38ed897a7c943a6fc952005a478a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -37.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1252443275, guid: b5ec38ed897a7c943a6fc952005a478a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -929,6 +929,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1838753141}
+    - target: {fileID: 7157682680674617400, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_Text
+      value: Repress
+      objectReference: {fileID: 0}
     - target: {fileID: 7157682680885019184, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
       propertyPath: m_RootOrder
@@ -989,6 +994,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7157682680953357275, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_Text
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157682680981848509, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7157682681762135538, guid: b5ec38ed897a7c943a6fc952005a478a,
+        type: 3}
+      propertyPath: m_Text
+      value: Put back in the stack
+      objectReference: {fileID: 0}
     - target: {fileID: 7157682682078852239, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1014,15 +1034,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1838753141}
-    - target: {fileID: 8706532071555357576, guid: b5ec38ed897a7c943a6fc952005a478a,
+    - target: {fileID: 8706532071651256629, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartBetweenDay
+      propertyPath: m_Text
+      value: End of the round
       objectReference: {fileID: 0}
-    - target: {fileID: 8706532072389107997, guid: b5ec38ed897a7c943a6fc952005a478a,
+    - target: {fileID: 8706532072681914799, guid: b5ec38ed897a7c943a6fc952005a478a,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Text
+      value: Next Round
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5ec38ed897a7c943a6fc952005a478a, type: 3}
