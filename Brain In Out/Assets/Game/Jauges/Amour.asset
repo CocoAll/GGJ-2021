@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aad98edd1122c44ae8e48ad8e800f8, type: 3}
   m_Name: Amour
   m_EditorClassIdentifier: 
-  defaultValue: 10
+  defaultValue: 50

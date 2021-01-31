@@ -67,6 +67,7 @@ public class BetweenRoundManager : MonoBehaviour
         //On reset le volume
         musicSource.volume /= 2.5f;
 
+        StartCoroutine(SetUpMusicPreparation());
         blackScreen.SetActive(true);
 
         //On remet le fond de base
@@ -82,7 +83,6 @@ public class BetweenRoundManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
 
-        StartCoroutine(SetUpMusicPreparation());
 
         startRound.Raise();
     }
