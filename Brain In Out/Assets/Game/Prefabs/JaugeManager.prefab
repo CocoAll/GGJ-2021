@@ -52,6 +52,14 @@ MonoBehaviour:
   jaugeAmour: {fileID: 11400000, guid: 990d5fce0ea0f0549a4c873b6ddfa173, type: 2}
   jaugeTravail: {fileID: 11400000, guid: 236e0ca4701ab684ba14ee6ef2487322, type: 2}
   jaugeSocial: {fileID: 11400000, guid: bf9eb9ee61d855745b735de78d2f615b, type: 2}
+  goJaugeAmour: {fileID: 0}
+  goJaugeTravail: {fileID: 0}
+  goJaugeSocial: {fileID: 0}
+  goJaugeAmourTemp: {fileID: 0}
+  goJaugeTravailTemp: {fileID: 0}
+  goJaugeSocialTemp: {fileID: 0}
+  increaseColor: {r: 0.9254902, g: 0.9411765, b: 0.94509804, a: 1}
+  decreaseColor: {r: 0.90588236, g: 0.29803923, b: 0.23529412, a: 1}
   onOverwhelmed: {fileID: 11400000, guid: 516a869048b81184a872c810aca10994, type: 2}
   currentEnveloppe: {fileID: 11400000, guid: fb0e338062f85644d9ecbb736d3a1a72, type: 2}
 --- !u!114 &5458230170635854838
