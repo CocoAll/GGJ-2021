@@ -20,6 +20,11 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private Text timerText;
 
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip mainMusicClip;
+
     private void Start()
     {
         timeRemaining = timeToWork;
@@ -50,6 +55,12 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     {
+        if(audioSource.clip != mainMusicClip)
+        {
+            audioSource.Stop();
+            audioSource.clip = mainMusicClip;
+            audioSource.Play();
+        }
         timerIsRunning.Value = true;
     }
 
