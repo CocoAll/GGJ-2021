@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     private SignalSender startRound;
     [SerializeField]
     private SignalSender gameOverSignal;
+    [SerializeField]
+    private SignalSender betweenDay;
 
     private bool isGameOver;
 
@@ -56,9 +58,13 @@ public class GameManager : MonoBehaviour
 
     public void StartRound()
     {
-        isGameRunning.Value = true;
+        isGameRunning.Value = false;
         isProcessingEnveloppe.Value = false;
-        startRound.Raise();
+    }
+
+    public void StartBetweenDay()
+    {
+        betweenDay.Raise();
     }
 
     private void StartGame()
